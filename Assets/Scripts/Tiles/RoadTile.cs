@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 [CreateAssetMenu(menuName = "CustomTile/RoadTile")]
-public class RoadTile : Tile
+public class RoadTile : Corruptible
 {
 
 }

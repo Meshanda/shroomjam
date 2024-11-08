@@ -1,5 +1,8 @@
+using System;
+using PathCreation;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.Tilemaps;
 
 [RequireComponent(typeof(EnemyPathController))]
 public class Enemy : MonoBehaviour
@@ -15,6 +18,12 @@ public class Enemy : MonoBehaviour
     [Tooltip("money point gained after killing the enemy")]
     [SerializeField] private int _earnedPoints = 0;
     
+    
+    
+    
+    private EnemyPathController _pathController;
+    
+
     public float Health
     {
         get => _health;
@@ -32,6 +41,16 @@ public class Enemy : MonoBehaviour
     }
 
     public float Speed => _speed;
+
+
+    private void Update()
+    {
+    }
+
+    public void Setup(PathCreator pathCreator)
+    {
+        _pathController.SetPathCreator(pathCreator);
+    }
 
     public void Damage(float damagePoint)
     {
