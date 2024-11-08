@@ -31,5 +31,6 @@ public class GameManager : Singleton<GameManager>
     private void OnGameOverHandler(GameOverType gameOverType)
     {
         // You lose
+        Debug.Log("You lost because " + gameOverType + " lmao");
     }
 }
