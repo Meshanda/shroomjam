@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1abb59e6adece934ca8fb464511b1b48, type: 3}
-  m_Name: TowerTile
+  m_Script: {fileID: 11500000, guid: 1c6e1bd878fe0984f939418e67c71aaa, type: 3}
+  m_Name: MainBaseTile
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -2185570801091399885, guid: 06faffa20d790b3409a10fc9119d7b69, type: 3}
+  m_Sprite: {fileID: -8078966772632430244, guid: 4703544d673dd0a4bb3652c2ad616494, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
