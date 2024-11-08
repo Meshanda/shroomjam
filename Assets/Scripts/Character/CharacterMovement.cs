@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class CharacterMovement : Corruptible
+public class CharacterMovement : MonoBehaviour
 {
     private Vector2 _movement;
     
     [SerializeField] private float _speed;
+
+    [SerializeField] private float _corruption = 0.0f;
     
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created

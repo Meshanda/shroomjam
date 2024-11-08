@@ -1,15 +1,24 @@
 using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.Tilemaps;
 
-public class Corruptible : MonoBehaviour
+public class Corruptible : Tile
 {
-    [SerializeField] private float _corruptionState = 0.0f;
+    [SerializeField] private float _corruption = 0.0f;
 
     public float CorruptionState
     {
-        get => _corruptionState;
+        get => _corruption;
         set
         {
-            _corruptionState = value;
+            if(value >= 0)
+            {
+                _corruption = value;
+            }
+            else
+            {
+                _corruption = 0;
+            }
         }
     }
 }
