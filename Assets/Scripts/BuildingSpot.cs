@@ -5,6 +5,7 @@ using UnityEngine;
 public class BuildingSpot : MonoBehaviour
 {
     [SerializeField] private GameObject _buildingMenuPfb;
+    
     private GameObject _buildingMenuInstance;
     private CircleCollider2D _collider;
 
@@ -13,10 +14,6 @@ public class BuildingSpot : MonoBehaviour
         _collider = GetComponent<CircleCollider2D>();
         _collider.isTrigger = true;
         _collider.radius = 10f;
-    }
-
-    private void Start()
-    {
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -31,9 +28,8 @@ public class BuildingSpot : MonoBehaviour
         Debug.Log("Exit");
         CloseBuildingMenu();
     }
-
-
-    public void CloseBuildingMenu()
+    
+    private void CloseBuildingMenu()
     {
         if (_buildingMenuInstance == null) return;
         
