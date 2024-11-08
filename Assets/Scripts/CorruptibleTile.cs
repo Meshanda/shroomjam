@@ -2,11 +2,11 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.Tilemaps;
 
-public class Corruptible : Tile
+public abstract class CorruptibleTile : CustomTile
 {
     [SerializeField] private float _corruption = 0.0f;
 
-    public float CorruptionState
+    public float Corruption
     {
         get => _corruption;
         set

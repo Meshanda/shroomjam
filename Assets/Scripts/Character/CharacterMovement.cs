@@ -1,23 +1,14 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Tilemaps;
 
 public class CharacterMovement : MonoBehaviour
 {
-    private Vector2 _movement;
-    
     [SerializeField] private float _speed;
-
     [SerializeField] private float _corruption = 0.0f;
     
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
+    private Vector2 _movement;
+    private void Update()
     {
         transform.Translate(_movement * (_speed * Time.deltaTime));
     }

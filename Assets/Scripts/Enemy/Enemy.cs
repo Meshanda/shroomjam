@@ -5,7 +5,7 @@ using UnityEngine.Serialization;
 using UnityEngine.Tilemaps;
 
 [RequireComponent(typeof(EnemyPathController))]
-public class Enemy : MonoBehaviour
+public class Enemy : Entity
 {
     [Tooltip("Enemy walk speed")]
     [SerializeField] private float _speed;
@@ -39,6 +39,8 @@ public class Enemy : MonoBehaviour
             }
         }
     }
+
+    public float CorruptionRate => _corruptionRate;
 
     public float Speed => _speed;
 
