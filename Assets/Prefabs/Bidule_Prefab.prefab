@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6640297575462488983}
   - component: {fileID: 2875636679293702240}
+  - component: {fileID: 8900086459321493186}
+  - component: {fileID: 5885474828461967181}
   m_Layer: 0
   m_Name: Bidule_Prefab
   m_TagString: Untagged
@@ -87,3 +89,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8900086459321493186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7203804278496370114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70623453d8187614ca2d49b5686e6321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _debugPathCreator: {fileID: 0}
+  _pathFollower: {fileID: 0}
+--- !u!114 &5885474828461967181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7203804278496370114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8493c2f2a700da5469022eece0bab2ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 0
+  _health: 0
+  _corruptionRate: 0
+  _earnedPoints: 0
