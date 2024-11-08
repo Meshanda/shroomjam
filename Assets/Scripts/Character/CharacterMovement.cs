@@ -1,13 +1,9 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class CharacterMovement : MonoBehaviour
+public class CharacterMovement : Corruptible
 {
     private Vector2 _movement;
-    
-    private Transform _player;
-    
-    
     
     [SerializeField] private float _speed;
     
@@ -15,13 +11,13 @@ public class CharacterMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        _player = GetComponent<Transform>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        _player.Translate(_movement * (_speed * Time.deltaTime));
+        transform.Translate(_movement * (_speed * Time.deltaTime));
     }
 
     public void OnMove(InputValue value)
