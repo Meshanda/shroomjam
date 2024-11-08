@@ -9,9 +9,7 @@ public class EnemyDatabaseSO : ScriptableObject
     public struct EnemyData
     {
         public StringVariableSO name;
-        public GameObject prefab;
-        public int health;
-        public int damage;
+        public Enemy prefab;
     }
 
     public List<EnemyData> Enemies;
@@ -30,20 +28,10 @@ public class EnemyDatabaseSO : ScriptableObject
     {
         Enemies.ForEach(e =>
         {
+            e.prefab.CheckValues();
             if (e.name is null)
             {
                 throw new ArgumentNullException("Enemy database has an element with a null enemy name");
-            }
-
-            if (e.prefab is null)
-            {
-                throw new ArgumentNullException("Enemy database has an element with a null enemy prefab");
-            }
-
-            if (e.health <= 0)
-            {
-                throw new ArgumentOutOfRangeException(
-                    "Enemy database has an element with a health lower or equal to 0");
             }
         });
     }

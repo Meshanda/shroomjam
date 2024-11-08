@@ -46,4 +46,9 @@ public class Enemy : MonoBehaviour
     {
         // bunch of stuff here
     }
+
+    public void CheckValues()
+    {
+        // bunch of test here
+    }
 }
