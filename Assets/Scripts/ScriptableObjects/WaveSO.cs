@@ -14,6 +14,7 @@ public class WaveSO : ScriptableObject
     }
     
     public List<WaveElement> Elements;
+    public IntVariableSO WaveReward;
     public int IntendedSpawnerNumber;
     
     public void CheckWaveIntegrity()
