@@ -5,12 +5,17 @@ using UnityEngine.Tilemaps;
 public abstract class Entity : MonoBehaviour
 {
     [SerializeField] protected Tilemap _tilemap;
+    private CustomTile _currentTile;
+
+    public CustomTile CurrentTile => _currentTile;
+    
     protected virtual void Update()
     {
         var position = _tilemap.WorldToCell(transform.position);
         var tile = _tilemap.GetTile(position);
         if (tile is CustomTile customTile)
         {
+            _currentTile = customTile;
             customTile.OnTile(this);
         }
     }

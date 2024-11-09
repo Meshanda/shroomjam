@@ -1,13 +1,10 @@
 using UnityEngine;
-using UnityEngine.Serialization;
-using UnityEngine.Tilemaps;
 
-public abstract class CorruptibleTile : CustomTile
+public class CorruptibleEntity : MonoBehaviour
 {
     private float _corruption = 0.0f;
-    
-    [Range(1f, 1000f)]
-    [SerializeField] private float _maxCorruption = 1f;
+    [Range(0.1f, 1000f)]
+    [SerializeField] private float _maxCorruption = 0.1f;
 
     public float Corruption
     {
@@ -19,4 +16,5 @@ public abstract class CorruptibleTile : CustomTile
     {
         Corruption += corruptionValue;
     }
+
 }
