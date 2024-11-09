@@ -2363,7 +2363,7 @@ MonoBehaviour:
   m_precedingControlPointLocalPosition: {x: 0, y: -0.46032214, z: 0}
   m_precedingControlPointPosition: {x: 6.4955354, y: -2.038125, z: 0}
   m_followingControlPointLocalPosition: {x: -7.848175, y: -0.5042689, z: 0}
-  m_followingControlPointPosition: {x: -1.3526394, y: -2.0820718, z: 0}
+  m_followingControlPointPosition: {x: -1.3526397, y: -2.0820718, z: 0}
   m_handleMode: 0
   m_normal: {x: 0, y: 1, z: 0}
   m_autoCalculatedNormalAngleOffset: 0
@@ -2421,7 +2421,7 @@ MonoBehaviour:
   m_precedingControlPointLocalPosition: {x: 0, y: -1.0339541, z: 0}
   m_precedingControlPointPosition: {x: -1.5211489, y: -2.5267746, z: 0}
   m_followingControlPointLocalPosition: {x: 2.4786568, y: 0, z: 0}
-  m_followingControlPointPosition: {x: 0.95750797, y: -1.4928205, z: 0}
+  m_followingControlPointPosition: {x: 0.95750785, y: -1.4928205, z: 0}
   m_handleMode: 0
   m_normal: {x: 0, y: 1, z: 0}
   m_autoCalculatedNormalAngleOffset: 0
@@ -3994,7 +3994,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_position: {x: 3.4361649, y: -1.4928205, z: 0}
   m_precedingControlPointLocalPosition: {x: -2.4786568, y: 0, z: 0}
-  m_precedingControlPointPosition: {x: 0.95750797, y: -1.4928205, z: 0}
+  m_precedingControlPointPosition: {x: 0.9575081, y: -1.4928205, z: 0}
   m_followingControlPointLocalPosition: {x: 0, y: -0.5028132, z: 0}
   m_followingControlPointPosition: {x: 3.4361649, y: -1.9956337, z: 0}
   m_handleMode: 0
@@ -4085,6 +4085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763430f5ad884b20a0937e0ecf720545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _specialTilemap: {fileID: 1222543087}
   EnemyDatabase: {fileID: 11400000, guid: 6b43068ca368c7c4aaa44c1a970fb2a9, type: 2}
 --- !u!4 &1836962719
 Transform:

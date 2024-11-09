@@ -10,8 +10,6 @@ public class WaveManager : MonoBehaviour
     [SerializeField] private List<Spawner> _spawners;
     [SerializeField] private List<WaveSO> _waves;
     
-    [SerializeField] private Tilemap _tilemap;
-    
     private WaveSO _currentWave;
 
     public void Awake()
@@ -80,7 +78,7 @@ public class WaveManager : MonoBehaviour
     {
         var enemyData = GameManager.Instance.EnemyDatabase.GetEnemyData(element.EnemyReference);
         var spawner = _spawners[element.SpawnerIndex];
-        spawner.Spawn(enemyData.prefab.gameObject, _tilemap);
+        spawner.Spawn(enemyData.prefab.gameObject, GameManager.Instance.SpecialTilemap);
         
         
         callback?.Invoke();
