@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public void Spawn(GameObject prefab)
+    public GameObject Spawn(GameObject prefab)
     {
-        Instantiate(prefab, transform.position, Quaternion.identity, transform);
         Debug.Log("Spawned");
+        return Instantiate(prefab, transform.position, Quaternion.identity, transform);
     }
 }

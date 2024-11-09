@@ -13,7 +13,5 @@ MonoBehaviour:
   m_Name: EnemyDatabase
   m_EditorClassIdentifier: 
   Enemies:
-  - name: {fileID: 11400000, guid: 79f73a53404c54947939018caee72464, type: 2}
-    prefab: {fileID: 7203804278496370114, guid: 499aab3bac09fe5438e044b10d812316, type: 3}
-    health: 5
-    damage: 1
+  - name: {fileID: 11400000, guid: dc85044615d2e5240bb6f38eca4dfcc9, type: 2}
+    prefab: {fileID: 3254297829206399260, guid: 133b268052350424ebb6b657e38c1f1b, type: 3}

@@ -8,7 +8,13 @@ public abstract class Entity : MonoBehaviour
     private CustomTile _currentTile;
 
     public CustomTile CurrentTile => _currentTile;
-    
+
+    public Tilemap Tilemap
+    {
+        get => _tilemap;
+        protected set => _tilemap = value;
+    }
+
     protected virtual void Update()
     {
         var position = _tilemap.WorldToCell(transform.position);

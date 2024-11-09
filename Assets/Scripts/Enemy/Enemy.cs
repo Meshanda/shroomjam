@@ -28,8 +28,6 @@ public class Enemy : Entity
     private List<CorruptibleEntity> _corruptiblesAround = new List<CorruptibleEntity>();
     
     
-    private EnemyPathController _pathController;
-    
 
     public float Health
     {
@@ -52,9 +50,10 @@ public class Enemy : Entity
     public float Speed => _speed;
     
 
-    public void Setup(BezierSpline spline)
+    public void Setup(BezierSpline spline, Tilemap tilemap)
     {
-        _pathController.SetPathCreator(spline);
+        GetComponent<EnemyPathController>().SetPathCreator(spline);
+        Tilemap = tilemap;
     }
 
     public void Damage(float damagePoint)
@@ -83,6 +82,7 @@ public class Enemy : Entity
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("bouh");
         if (other.gameObject.CompareTag("CorruptibleEntity"))
         {
             if (other.gameObject.GetComponent<CorruptibleEntity>() is { } corruptibleEntity)
