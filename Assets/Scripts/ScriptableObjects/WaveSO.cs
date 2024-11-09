@@ -35,5 +35,9 @@ public class WaveSO : ScriptableObject
         {
             throw new ArgumentOutOfRangeException("Wave " + name + " has an intended spawner number lower or equal to 0");
         }
+        if (WaveReward is null)
+        {
+            throw new ArgumentNullException("Wave " + name + " has a null wave reward");
+        }
     }
 }
