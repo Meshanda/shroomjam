@@ -23,12 +23,12 @@ public class MainBaseTile : CorruptibleTile
         if (Corruption > _maxCorruption)
         {
             // Game Over : Call the event for "Game Over"
-            GameManager.OnGameOver.Invoke(Enums.GameOverType.BaseDestroyed);
+            GameManager.OnGameOver?.Invoke(Enums.GameOverType.BaseDestroyed);
         }
         else
         {
             // Call something to tell the corruption has changed (To modify camera / etc. )
-            GameManager.OnEnemyHitBase.Invoke(Corruption);
+            GameManager.OnEnemyHitBase?.Invoke(Corruption);
         }
     }
 

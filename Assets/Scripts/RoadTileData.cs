@@ -1,12 +1,10 @@
 using System;
 using UnityEngine;
 
-public class RoadTileData : MonoBehaviour
+public class RoadTileData : Corruptible
 {
     [SerializeField] private SpriteRenderer _spriteRenderer;
     
-    [SerializeField] private float _corruption;
-
     [Header("Sprites")]
     [SerializeField] private Sprite _defaultSprite;
     [SerializeField] private Sprite _lowCorruptRoadSprite;
@@ -16,19 +14,18 @@ public class RoadTileData : MonoBehaviour
 
     private void Awake()
     {
-        _corruption = 0f;
         _spriteRenderer.sprite = _defaultSprite;
     }
 
     public void ChangeCorruption(float value)
     {
-        _corruption += value;
+        Corrupt(value);
         UpdateSprite();
     }
     
     private void UpdateSprite()
     {
-        _spriteRenderer.sprite = _corruption switch
+        _spriteRenderer.sprite = Corruption switch
         {
             0.0f => _defaultSprite,
             > 0.0f and <= 0.33f => _lowCorruptRoadSprite,

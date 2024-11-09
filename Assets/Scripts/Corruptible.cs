@@ -14,6 +14,8 @@ public class Corruptible : MonoBehaviour
         get => _corruption;
         private set => _corruption = Mathf.Clamp(value, 0f, _maxCorruption);
     }
+    
+    public float MaxCorruption { get; private set; }
 
     public void Corrupt(float corruptionValue)
     {

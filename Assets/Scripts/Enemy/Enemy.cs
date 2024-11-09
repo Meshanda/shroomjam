@@ -48,14 +48,9 @@ public class Enemy : Entity
 
     private void Die()
     {
-        OnDeath?.Invoke(this);
+		OnDeath?.Invoke(this);
         
-        // bunch of stuff here
-        
-        if (CurrentTile is RoadTile roadTile)
-        {
-            roadTile.Corrupt(_corruptionRate);
-        }
+        TileManager.Instance.EnemyDead(transform.position, _corruptionRate);
 
         Destroy(gameObject);
     }
@@ -96,7 +91,6 @@ public class Enemy : Entity
             }
         }
     }
-
 
     private IEnumerator Corrupt()
     {
