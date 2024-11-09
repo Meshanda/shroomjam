@@ -32,17 +32,7 @@ public class Enemy : Entity
     public float Health
     {
         get => _health;
-        private set
-        {
-            if(value >= 0)
-            {
-                _health = value;
-            }
-            else
-            {
-                _health = 0;
-            }
-        }
+        private set => _health = value >= 0 ? value : 0;
     }
 
     public float CorruptionRate => _corruptionRate;
