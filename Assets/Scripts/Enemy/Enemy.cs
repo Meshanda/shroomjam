@@ -72,7 +72,6 @@ public class Enemy : Entity
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("bouh");
         if (other.gameObject.CompareTag("CorruptibleEntity"))
         {
             if (other.gameObject.GetComponent<CorruptibleEntity>() is { } corruptibleEntity)
