@@ -26,8 +26,8 @@ public class Enemy : Entity
     
     
     private List<Corruptible> _corruptiblesAround = new List<Corruptible>();
-    
-    
+
+    public static event Action<Enemy> OnDeath;
 
     public float Health
     {
@@ -46,23 +46,18 @@ public class Enemy : Entity
         Tilemap = tilemap;
     }
 
-    public void Damage(float damagePoint)
+    private void Die()
     {
-        Health -= damagePoint;
-        if (Health <= 0)
-        {
-            KillEnemy();
-        }
-    }
-
-    private void KillEnemy()
-    {
+        OnDeath?.Invoke(this);
+        
+        // bunch of stuff here
+        
         if (CurrentTile is RoadTile roadTile)
         {
             roadTile.Corrupt(_corruptionRate);
         }
 
-        // bunch of stuff here
+        Destroy(gameObject);
     }
 
     public void CheckValues()
@@ -116,5 +111,13 @@ public class Enemy : Entity
 
             yield return new WaitForSeconds(_corruptionSpeed);
         }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        Health -= damage;
+        
+        if (Health <= 0) 
+            Die();
     }
 }

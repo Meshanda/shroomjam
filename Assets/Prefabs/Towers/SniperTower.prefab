@@ -126,6 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxCorruption: 0.1
+  _bulletPfb: {fileID: 6698104316039897986, guid: 95b6b5ab87f2d3543a8b6dedf663b9c9, type: 3}
 --- !u!212 &400075936732479335
 SpriteRenderer:
   m_ObjectHideFlags: 0

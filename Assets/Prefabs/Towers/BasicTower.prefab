@@ -48,6 +48,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxCorruption: 0.1
+  _bulletPfb: {fileID: 6698104316039897986, guid: 95b6b5ab87f2d3543a8b6dedf663b9c9, type: 3}
+  _damage: 1
+  _range: 3
+  _attackSpeed: 2.5
+  _cost: 0
 --- !u!212 &6064134101883083133
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -138,7 +143,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 1.91
 --- !u!1 &6270518116260097949
 GameObject:
   m_ObjectHideFlags: 0
