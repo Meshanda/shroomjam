@@ -1,15 +1,10 @@
-using PathCreation;
-using PathCreation.Examples;
+using BezierSolution;
 using UnityEngine;
 
 public class EnemyPathController : MonoBehaviour
 {
-    
-#if UNITY_EDITOR
-    [SerializeField] private PathCreator _debugPathCreator;
-#endif
-    
-    [SerializeField] private PathFollower _pathFollower;
+
+    [SerializeField] private BezierWalkerWithSpeed _splineFollower;
     
 
     private Enemy _enemyData;
@@ -19,12 +14,8 @@ public class EnemyPathController : MonoBehaviour
     void Start()
     {
         _enemyData = GetComponent<Enemy>();
-        
-#if UNITY_EDITOR
-        _pathFollower.pathCreator = _debugPathCreator;
-#endif
-        
-        _pathFollower.speed = _enemyData.Speed;
+
+        _splineFollower.speed = _enemyData.Speed;
     }
 
     // Update is called once per frame
@@ -33,8 +24,8 @@ public class EnemyPathController : MonoBehaviour
         
     }
 
-    public void SetPathCreator(PathCreator pathCreator)
+    public void SetPathCreator(BezierSpline spline)
     {
-        _pathFollower.pathCreator = pathCreator;
+        _splineFollower.spline = spline;
     }
 }

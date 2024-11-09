@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 2727695740091589196}
-  _corruption: 1.2000002
+  _corruption: 0
   _defaultSprite: {fileID: 1882085707398116769, guid: eb9c0cefc16e27149ab79c05f7feb2bf, type: 3}
   _lowCorruptRoadSprite: {fileID: -3179475428647613145, guid: f42343bd72b52784390c2cb58fd9cc39, type: 3}
   _midCorruptRoadSprite: {fileID: 3216038519745011095, guid: e9b0aaa383a8c32408e53b13054a682d, type: 3}

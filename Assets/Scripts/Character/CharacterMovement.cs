@@ -5,7 +5,6 @@ using UnityEngine.Tilemaps;
 public class CharacterMovement : MonoBehaviour
 {
     [SerializeField] private float _speed;
-    [SerializeField] private float _corruption = 0.0f;
     
     private Vector2 _movement;
     private void Update()

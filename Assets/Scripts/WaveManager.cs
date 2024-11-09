@@ -1,12 +1,16 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using BezierSolution;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class WaveManager : MonoBehaviour
 {
     [SerializeField] private List<Spawner> _spawners;
     [SerializeField] private List<WaveSO> _waves;
+    
+    [SerializeField] private Tilemap _tilemap;
     
     private WaveSO _currentWave;
 
@@ -76,7 +80,8 @@ public class WaveManager : MonoBehaviour
     {
         var enemyData = GameManager.Instance.EnemyDatabase.GetEnemyData(element.EnemyReference);
         var spawner = _spawners[element.SpawnerIndex];
-        spawner.Spawn(enemyData.prefab.gameObject);
+        spawner.Spawn(enemyData.prefab.gameObject, _tilemap);
+        
         
         callback?.Invoke();
     }

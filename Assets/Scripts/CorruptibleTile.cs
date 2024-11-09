@@ -4,21 +4,19 @@ using UnityEngine.Tilemaps;
 
 public abstract class CorruptibleTile : CustomTile
 {
-    [SerializeField] private float _corruption = 0.0f;
+    private float _corruption = 0.0f;
+    
+    [Range(1f, 1000f)]
+    [SerializeField] private float _maxCorruption = 1f;
 
     public float Corruption
     {
         get => _corruption;
-        set
-        {
-            if(value >= 0)
-            {
-                _corruption = value;
-            }
-            else
-            {
-                _corruption = 0;
-            }
-        }
+        private set => _corruption = Mathf.Clamp(value, 0f, _maxCorruption);
+    }
+
+    public void Corrupt(float corruptionValue)
+    {
+        Corruption += corruptionValue;
     }
 }

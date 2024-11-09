@@ -16,7 +16,7 @@ public class MainBaseTile : CorruptibleTile
     
     public void EnemyTouched(float corruption)
     {
-        Corruption += corruption;
+        Corrupt(Corruption);
         
         // Modify MainBase Sprite to Show Corruption
         

@@ -18,14 +18,16 @@ public class BuildingSpot : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Enter");
+        if (!other.CompareTag("Player")) return;
+        
         if (_buildingMenuInstance == null) 
             _buildingMenuInstance = Instantiate(_buildingMenuPfb, transform.position, Quaternion.identity);
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("Exit");
+        if (!other.CompareTag("Player")) return;
+        
         CloseBuildingMenu();
     }
     
