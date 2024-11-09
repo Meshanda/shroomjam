@@ -10,15 +10,18 @@ public class BuildingSpot : MonoBehaviour
     private BuildingMenu _buildingMenuInstance;
     private CircleCollider2D _collider;
     private Vector3Int _tilePos;
+    private static Action OpenNewBuildingMenu;
 
     private void OnEnable()
     {
         BuildingMenu.OnTowerBuilt += OnTowerBuiltHandler;
+        OpenNewBuildingMenu += CloseBuildingMenu;
     }
 
     private void OnDisable()
     {
         BuildingMenu.OnTowerBuilt -= OnTowerBuiltHandler;
+        OpenNewBuildingMenu -= CloseBuildingMenu;
     }
 
     private void Awake()
@@ -56,6 +59,7 @@ public class BuildingSpot : MonoBehaviour
     {
         if (_buildingMenuInstance != null) return;
         
+        OpenNewBuildingMenu?.Invoke();
         
         _buildingMenuInstance = Instantiate(_buildingMenuPfb, transform.position, Quaternion.identity).GetComponent<BuildingMenu>();
         _buildingMenuInstance.Init(_tilePos);
