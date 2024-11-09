@@ -7,7 +7,7 @@ public abstract class CorruptibleTile : CustomTile
     private float _corruption = 0.0f;
     
     [Range(1f, 1000f)]
-    [SerializeField] private float _maxCorruption = 1f;
+    [SerializeField] protected float _maxCorruption = 1f;
 
     public float Corruption
     {
