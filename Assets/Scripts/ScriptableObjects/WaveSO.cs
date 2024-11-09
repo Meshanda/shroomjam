@@ -14,7 +14,7 @@ public class WaveSO : ScriptableObject
     }
     
     public List<WaveElement> Elements;
-    public IntVariableSO WaveReward;
+    [Range(0, 100)] public int WaveReward;
     public int IntendedSpawnerNumber;
     
     public void CheckWaveIntegrity()
@@ -34,10 +34,6 @@ public class WaveSO : ScriptableObject
         if (IntendedSpawnerNumber <= 0)
         {
             throw new ArgumentOutOfRangeException("Wave " + name + " has an intended spawner number lower or equal to 0");
-        }
-        if (WaveReward is null)
-        {
-            throw new ArgumentNullException("Wave " + name + " has a null wave reward");
         }
     }
 }

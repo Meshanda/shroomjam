@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8247812061427498092}
   m_Layer: 6
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,7 +51,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tilemap: {fileID: 0}
-  _currentTile: {fileID: 0}
 --- !u!114 &3953352293217622232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,6 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86a2581a6d888bd47b273d66ac57b0e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxCorruption: 0.1
 --- !u!61 &37829441166189683
 BoxCollider2D:
   m_ObjectHideFlags: 0
