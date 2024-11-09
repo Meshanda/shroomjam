@@ -18,7 +18,7 @@ public class MainBaseTile : CorruptibleTile
     {
         Corruption += corruption;
         
-        // Modify MainBase Sprite ? 
+        // Modify MainBase Sprite to Show Corruption
         
         
         // Check if it's game over
