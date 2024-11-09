@@ -2,7 +2,7 @@
 
 namespace Character
 {
-    [RequireComponent(typeof(CharacterMovement), typeof(CorruptibleEntity))]
+    [RequireComponent(typeof(CharacterMovement), typeof(Corruptible))]
     public class Player : Entity
     {
         

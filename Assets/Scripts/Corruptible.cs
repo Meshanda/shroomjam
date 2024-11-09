@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CorruptibleEntity : MonoBehaviour
+public class Corruptible : MonoBehaviour
 {
     private float _corruption = 0.0f;
     [Range(0.1f, 1000f)]

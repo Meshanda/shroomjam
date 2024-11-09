@@ -1,10 +1,16 @@
+using BezierSolution;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject Spawn(GameObject prefab)
+    
+    [SerializeField] private BezierSpline _spline;
+    
+    public void Spawn(GameObject prefab, Tilemap tilemap)
     {
         Debug.Log("Spawned");
-        return Instantiate(prefab, transform.position, Quaternion.identity, transform);
+        var enemySpawned = Instantiate(prefab, transform.position, Quaternion.identity, transform);
+        enemySpawned.GetComponent<Enemy>().Setup(_spline, tilemap);
     }
 }

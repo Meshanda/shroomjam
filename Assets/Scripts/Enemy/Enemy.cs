@@ -25,7 +25,7 @@ public class Enemy : Entity
     [SerializeField] private int _earnedPoints = 0;
     
     
-    private List<CorruptibleEntity> _corruptiblesAround = new List<CorruptibleEntity>();
+    private List<Corruptible> _corruptiblesAround = new List<Corruptible>();
     
     
 
@@ -72,9 +72,9 @@ public class Enemy : Entity
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("CorruptibleEntity"))
+        if (other.gameObject.layer.CompareTo(LayerMask.NameToLayer("Corruptible")) == 0)
         {
-            if (other.gameObject.GetComponent<CorruptibleEntity>() is { } corruptibleEntity)
+            if (other.gameObject.GetComponent<Corruptible>() is { } corruptibleEntity)
             {
                 _corruptiblesAround.Add(corruptibleEntity);
             }
@@ -88,9 +88,9 @@ public class Enemy : Entity
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("CorruptibleEntity"))
+        if (other.gameObject.layer.CompareTo(LayerMask.NameToLayer("Corruptible")) == 0)
         {
-            if (other.gameObject.GetComponent<CorruptibleEntity>() is { } corruptibleEntity)
+            if (other.gameObject.GetComponent<Corruptible>() is { } corruptibleEntity)
             {
                 _corruptiblesAround.Remove(corruptibleEntity);
             }
@@ -107,7 +107,7 @@ public class Enemy : Entity
     {
         while (_corruptiblesAround.Count >0)
         {
-            var corruptiblesAroundCopy = new List<CorruptibleEntity>(_corruptiblesAround);
+            var corruptiblesAroundCopy = new List<Corruptible>(_corruptiblesAround);
 
             foreach (var corruptibleEntity in corruptiblesAroundCopy)
             {
