@@ -4,18 +4,20 @@ using UnityEngine.Tilemaps;
 
 public class GameManager : Singleton<GameManager>
 {
-    
-    
     public static Action<Enums.GameOverType> OnGameOver;
+    public static Action<float> OnEnemyHitBase;
 
     private void OnEnable()
     {
         OnGameOver += OnGameOverHandler;
+        OnEnemyHitBase += OnEnemyHitBaseHandler;
     }
 
     private void OnDisable()
     {
         OnGameOver -= OnGameOverHandler;
+        OnEnemyHitBase -= OnEnemyHitBaseHandler;
+
     }
 
     public EnemyDatabaseSO EnemyDatabase;
@@ -34,5 +36,10 @@ public class GameManager : Singleton<GameManager>
     {
         // You lose
         Debug.Log("You lost because " + gameOverType + " lmao");
+    }
+
+    private void OnEnemyHitBaseHandler(float baseCorruption)
+    {
+        // Change Camera based on "baseCorruption". And Everything we want to change based on the corruption on the base
     }
 }

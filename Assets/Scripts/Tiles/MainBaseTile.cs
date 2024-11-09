@@ -3,9 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "CustomTile/MainBaseTile")]
 public class MainBaseTile : CorruptibleTile
 {
-    [SerializeField] private float _corruptionMax;
-
-    
+   
     public override void OnTile(Entity entity)
     {
         if (entity is Enemy enemy)
@@ -16,13 +14,13 @@ public class MainBaseTile : CorruptibleTile
     
     public void EnemyTouched(float corruption)
     {
-        Corrupt(Corruption);
+        Corrupt(corruption);
         
         // Modify MainBase Sprite to Show Corruption
         
         
         // Check if it's game over
-        if (Corruption > _corruptionMax)
+        if (Corruption > _maxCorruption)
         {
             // Game Over : Call the event for "Game Over"
             GameManager.OnGameOver.Invoke(Enums.GameOverType.BaseDestroyed);
@@ -30,7 +28,7 @@ public class MainBaseTile : CorruptibleTile
         else
         {
             // Call something to tell the corruption has changed (To modify camera / etc. )
-            
+            GameManager.OnEnemyHitBase.Invoke(Corruption);
         }
     }
 
