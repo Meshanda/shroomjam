@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3766902440525026818}
-  - component: {fileID: 6191821470178710075}
   - component: {fileID: 5416372819577579200}
+  - component: {fileID: 6191821470178710075}
   - component: {fileID: 7021149229159831129}
   m_Layer: 0
   m_Name: Square (1)
@@ -35,6 +35,21 @@ Transform:
   - {fileID: 1574512262434713843}
   m_Father: {fileID: 137419313160880485}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5416372819577579200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919516928790222281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 512e32879c0946b4a8ce55f91016e526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _towerType: 1
+  NormalColor: {r: 1, g: 1, b: 1, a: 1}
+  HoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!212 &6191821470178710075
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -90,21 +105,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5416372819577579200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919516928790222281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 512e32879c0946b4a8ce55f91016e526, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NormalColor: {r: 1, g: 1, b: 1, a: 1}
-  HoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  ButtonIndex: 0
 --- !u!61 &7021149229159831129
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -546,8 +546,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 244492141274140174}
-  - component: {fileID: 6779991098957267512}
   - component: {fileID: 5411440173586389046}
+  - component: {fileID: 6779991098957267512}
   - component: {fileID: 7899060169963079631}
   m_Layer: 0
   m_Name: Square (2)
@@ -572,6 +572,21 @@ Transform:
   - {fileID: 6608161685295112751}
   m_Father: {fileID: 137419313160880485}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5411440173586389046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4381900761560077501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 512e32879c0946b4a8ce55f91016e526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _towerType: 2
+  NormalColor: {r: 1, g: 1, b: 1, a: 1}
+  HoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!212 &6779991098957267512
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -627,21 +642,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5411440173586389046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4381900761560077501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 512e32879c0946b4a8ce55f91016e526, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NormalColor: {r: 1, g: 1, b: 1, a: 1}
-  HoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  ButtonIndex: 0
 --- !u!61 &7899060169963079631
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -697,8 +697,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5203352381810050470}
-  - component: {fileID: 9157453224755771381}
   - component: {fileID: 712253436841385760}
+  - component: {fileID: 9157453224755771381}
   - component: {fileID: 3565186473442573169}
   m_Layer: 0
   m_Name: Square
@@ -723,6 +723,21 @@ Transform:
   - {fileID: 690987483768303327}
   m_Father: {fileID: 137419313160880485}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &712253436841385760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5089596038284534628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 512e32879c0946b4a8ce55f91016e526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _towerType: 0
+  NormalColor: {r: 1, g: 1, b: 1, a: 1}
+  HoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!212 &9157453224755771381
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -778,21 +793,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &712253436841385760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5089596038284534628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 512e32879c0946b4a8ce55f91016e526, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NormalColor: {r: 1, g: 1, b: 1, a: 1}
-  HoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  ButtonIndex: 0
 --- !u!61 &3565186473442573169
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1039,8 +1039,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 137419313160880485}
-  - component: {fileID: 555965634295487803}
   - component: {fileID: 2962130839343049850}
+  - component: {fileID: 555965634295487803}
   m_Layer: 0
   m_Name: BuildingMenu
   m_TagString: Untagged
@@ -1067,6 +1067,23 @@ Transform:
   - {fileID: 6281821429744397121}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2962130839343049850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6207749296064699354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7d8d6aac5a941f19b337df756ed2531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _buttons:
+  - {fileID: 712253436841385760}
+  - {fileID: 5416372819577579200}
+  - {fileID: 5411440173586389046}
+  - {fileID: 4017985704697298700}
 --- !u!212 &555965634295487803
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1122,23 +1139,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2962130839343049850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6207749296064699354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7d8d6aac5a941f19b337df756ed2531, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _buttons:
-  - {fileID: 712253436841385760}
-  - {fileID: 5416372819577579200}
-  - {fileID: 5411440173586389046}
-  - {fileID: 4017985704697298700}
 --- !u!1 &7556735473385414064
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,8 +1339,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6281821429744397121}
-  - component: {fileID: 312815464860575699}
   - component: {fileID: 4017985704697298700}
+  - component: {fileID: 312815464860575699}
   - component: {fileID: 7992016346128758246}
   m_Layer: 0
   m_Name: Square (3)
@@ -1365,6 +1365,21 @@ Transform:
   - {fileID: 5306151182473227355}
   m_Father: {fileID: 137419313160880485}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4017985704697298700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8410435358915862755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 512e32879c0946b4a8ce55f91016e526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _towerType: 3
+  NormalColor: {r: 1, g: 1, b: 1, a: 1}
+  HoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!212 &312815464860575699
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1420,21 +1435,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4017985704697298700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8410435358915862755}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 512e32879c0946b4a8ce55f91016e526, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NormalColor: {r: 1, g: 1, b: 1, a: 1}
-  HoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  ButtonIndex: 0
 --- !u!61 &7992016346128758246
 BoxCollider2D:
   m_ObjectHideFlags: 0

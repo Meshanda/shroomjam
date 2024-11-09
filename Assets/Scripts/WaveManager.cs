@@ -78,7 +78,7 @@ public class WaveManager : MonoBehaviour
     {
         var enemyData = GameManager.Instance.EnemyDatabase.GetEnemyData(element.EnemyReference);
         var spawner = _spawners[element.SpawnerIndex];
-        spawner.Spawn(enemyData.prefab.gameObject, GameManager.Instance.SpecialTilemap);
+        spawner.Spawn(enemyData.prefab.gameObject, TileManager.Instance.SpecialTilemap);
         
         
         callback?.Invoke();

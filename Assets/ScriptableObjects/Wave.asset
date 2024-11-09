@@ -17,12 +17,7 @@ MonoBehaviour:
     SpawnerIndex: 0
     Delay: 0
   - EnemyReference: {fileID: 11400000, guid: dc85044615d2e5240bb6f38eca4dfcc9, type: 2}
-    SpawnerIndex: 1
-    Delay: 0
-  - EnemyReference: {fileID: 11400000, guid: dc85044615d2e5240bb6f38eca4dfcc9, type: 2}
     SpawnerIndex: 0
     Delay: 5
-  - EnemyReference: {fileID: 11400000, guid: dc85044615d2e5240bb6f38eca4dfcc9, type: 2}
-    SpawnerIndex: 1
-    Delay: 0
-  IntendedSpawnerNumber: 2
+  WaveReward: 0
+  IntendedSpawnerNumber: 1

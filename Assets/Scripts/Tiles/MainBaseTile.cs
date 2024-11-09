@@ -25,7 +25,7 @@ public class MainBaseTile : CorruptibleTile
         if (Corruption > _corruptionMax)
         {
             // Game Over : Call the event for "Game Over"
-            GameManager.OnGameOver.Invoke(GameManager.GameOverType.BaseDestroyed);
+            GameManager.OnGameOver.Invoke(Enums.GameOverType.BaseDestroyed);
         }
         else
         {

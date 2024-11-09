@@ -1,24 +1,28 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.PlayerLoop;
 
 [RequireComponent(typeof(BoxCollider2D), typeof(Renderer))]
 public class BuildingMenuButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
+    [SerializeField] private Enums.TowerType _towerType;
+    
     public Color NormalColor = Color.white;
     public Color HoverColor = Color.grey;
-    public int ButtonIndex = 0;
 
     private Renderer _renderer;
+    private BuildingMenu _buildingMenu;
 
     private void Awake()
     {
         _renderer = GetComponent<Renderer>();
+        _buildingMenu = GetComponentInParent<BuildingMenu>();
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log($"Button {ButtonIndex} Clicked");
+        _buildingMenu.OnButtonClicked(_towerType);
     }
 
     public void OnPointerEnter(PointerEventData eventData)

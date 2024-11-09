@@ -4,10 +4,9 @@ using UnityEngine.Tilemaps;
 
 public class GameManager : Singleton<GameManager>
 {
-    [SerializeField] private Tilemap _specialTilemap;
-    public Tilemap SpecialTilemap => _specialTilemap;
-    public enum GameOverType { BaseDestroyed, PlayerDead };
-    public static Action<GameOverType> OnGameOver;
+    
+    
+    public static Action<Enums.GameOverType> OnGameOver;
 
     private void OnEnable()
     {
@@ -29,10 +28,9 @@ public class GameManager : Singleton<GameManager>
     private void Init()
     {
         EnemyDatabase.CheckDatabaseIntegrity();
-        if (_specialTilemap == null) throw new ArgumentNullException("Special Tilemap is not assigned");
     }
 
-    private void OnGameOverHandler(GameOverType gameOverType)
+    private void OnGameOverHandler(Enums.GameOverType gameOverType)
     {
         // You lose
         Debug.Log("You lost because " + gameOverType + " lmao");

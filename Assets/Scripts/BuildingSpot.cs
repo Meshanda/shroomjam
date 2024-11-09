@@ -1,4 +1,5 @@
 ﻿using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(CircleCollider2D))]
@@ -6,8 +7,19 @@ public class BuildingSpot : MonoBehaviour
 {
     [SerializeField] private GameObject _buildingMenuPfb;
     
-    private GameObject _buildingMenuInstance;
+    private BuildingMenu _buildingMenuInstance;
     private CircleCollider2D _collider;
+    private Vector3Int _tilePos;
+
+    private void OnEnable()
+    {
+        BuildingMenu.OnTowerBuilt += OnTowerBuiltHandler;
+    }
+
+    private void OnDisable()
+    {
+        BuildingMenu.OnTowerBuilt -= OnTowerBuiltHandler;
+    }
 
     private void Awake()
     {
@@ -16,12 +28,16 @@ public class BuildingSpot : MonoBehaviour
         _collider.radius = 10f;
     }
 
+    private void Start()
+    {
+        _tilePos = TileManager.Instance.SpecialTilemap.WorldToCell(transform.position);
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
-        
-        if (_buildingMenuInstance == null) 
-            _buildingMenuInstance = Instantiate(_buildingMenuPfb, transform.position, Quaternion.identity);
+
+        OpenBuildingMenu();
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -30,12 +46,26 @@ public class BuildingSpot : MonoBehaviour
         
         CloseBuildingMenu();
     }
+
+    private void OnTowerBuiltHandler(Enums.TowerType towerType)
+    {
+        CloseBuildingMenu();
+    }
+    
+    private void OpenBuildingMenu()
+    {
+        if (_buildingMenuInstance != null) return;
+        
+        
+        _buildingMenuInstance = Instantiate(_buildingMenuPfb, transform.position, Quaternion.identity).GetComponent<BuildingMenu>();
+        _buildingMenuInstance.Init(_tilePos);
+    }
     
     private void CloseBuildingMenu()
     {
         if (_buildingMenuInstance == null) return;
         
-        Destroy(_buildingMenuInstance);
+        Destroy(_buildingMenuInstance.gameObject);
         _buildingMenuInstance = null;
     }
 }

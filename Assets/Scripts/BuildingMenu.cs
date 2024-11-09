@@ -5,12 +5,36 @@ using UnityEngine;
 public class BuildingMenu : MonoBehaviour
 {
     [SerializeField] private List<BuildingMenuButton> _buttons;
+    
+    public static event Action<Enums.TowerType> OnTowerBuilt;
 
-    private void OnEnable()
+    private Vector3Int _tilePosition;
+    
+    public void Init(Vector3Int tilePos)
     {
-        for (var i = 0; i < _buttons.Count; i++)
+        _tilePosition = tilePos;
+    }
+    
+    public void OnButtonClicked(Enums.TowerType towerType)
+    {
+        OnTowerBuilt?.Invoke(towerType);
+        
+        switch (towerType)
         {
-            _buttons[i].ButtonIndex = i+1;
+            case Enums.TowerType.Basic:
+                TileManager.Instance.SetTileTourBasic(_tilePosition);
+                break;
+            case Enums.TowerType.Fast:
+                TileManager.Instance.SetTileTourFast(_tilePosition);
+                break;
+            case Enums.TowerType.Sniper:
+                TileManager.Instance.SetTileTourSniper(_tilePosition);
+                break;
+            case Enums.TowerType.Support:
+                TileManager.Instance.SetTileTourSupport(_tilePosition);
+                break;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(towerType), towerType, null);
         }
     }
 }

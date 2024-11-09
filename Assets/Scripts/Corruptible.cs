@@ -1,10 +1,13 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Collider2D))]
 public class Corruptible : MonoBehaviour
 {
     private float _corruption = 0.0f;
     [Range(0.1f, 1000f)]
     [SerializeField] private float _maxCorruption = 0.1f;
+
+    public float CorruptionRate { get; protected set; } = 1f;
 
     public float Corruption
     {
@@ -14,7 +17,7 @@ public class Corruptible : MonoBehaviour
 
     public void Corrupt(float corruptionValue)
     {
-        Corruption += corruptionValue;
+        Corruption += corruptionValue * CorruptionRate;
     }
 
 }
