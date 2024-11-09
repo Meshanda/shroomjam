@@ -1,9 +1,4 @@
-using System;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.Rendering.VirtualTexturing;
 
 public class CharacterPower : MonoBehaviour
 {
@@ -23,7 +18,6 @@ public class CharacterPower : MonoBehaviour
 
     public void OnClean()
     {
-        Debug.Log("Clean");
         Collider2D[] overlapResults = Physics2D.OverlapCircleAll(transform.position, _cleanData.Range / 2);
         if (overlapResults.Length > 0)
         {
@@ -36,25 +30,6 @@ public class CharacterPower : MonoBehaviour
                     corruptible.DeCorrupt(_cleanData.Value);
                 }
             }
-        }
-    }
-
-    public void OnDrawGizmos()
-    {
-        if (_cleanData.ShowGizmos)
-        {
-            Handles.color = Color.red;
-            Handles.DrawWireDisc(transform.position, Vector3.forward, _cleanData.Range / 2);
-        }
-        if (_shieldData.ShowGizmos)
-        {
-            Handles.color = Color.green;
-            Handles.DrawWireDisc(transform.position, Vector3.forward, _shieldData.Range / 2);
-        }
-        if (_boostData.ShowGizmos)
-        {
-            Handles.color = Color.blue;
-            Handles.DrawWireDisc(transform.position, Vector3.forward, _boostData.Range / 2);
         }
     }
 
