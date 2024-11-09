@@ -51,7 +51,6 @@ public class TileManager : Singleton<TileManager>
         RoadTileData roadTileData = go.GetComponent<RoadTileData>();
         roadTileData.ChangeCorruption(damage);
     }
-    
 
     private void Init()
     {

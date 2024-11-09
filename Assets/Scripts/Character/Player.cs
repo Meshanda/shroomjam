@@ -1,10 +1,8 @@
 ﻿using UnityEngine;
 
-namespace Character
+
+[RequireComponent(typeof(CharacterMovement), typeof(Corruptible))]
+public class Player : Entity
 {
-    [RequireComponent(typeof(CharacterMovement), typeof(Corruptible))]
-    public class Player : Entity
-    {
-        
-    }
+
 }

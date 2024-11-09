@@ -13,4 +13,11 @@
         BaseDestroyed, 
         PlayerDead
     };
+
+    public enum PowerType
+    {
+        Heal,
+        Shield,
+        Boost
+    };
 }

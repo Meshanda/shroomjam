@@ -23,7 +23,7 @@ public class RoadTileData : Corruptible
         UpdateSprite();
     }
     
-    private void UpdateSprite()
+    protected override void UpdateSprite()
     {
         _spriteRenderer.sprite = Corruption switch
         {

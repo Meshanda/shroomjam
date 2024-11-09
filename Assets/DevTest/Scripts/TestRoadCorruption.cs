@@ -11,8 +11,6 @@ public class TestRoadCorruption : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Mouse Down");
-            
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3Int position = _tilemap.WorldToCell(mousePosition);
             
@@ -20,8 +18,9 @@ public class TestRoadCorruption : MonoBehaviour
 
             if (!go) return;
 
-            RoadTileData roadTileData = go.GetComponent<RoadTileData>();
-            roadTileData.ChangeCorruption(_corruptValue);
+            if(!go.TryGetComponent<Corruptible>(out Corruptible roadTileData)) return;
+            
+            roadTileData.Corrupt(_corruptValue);
         }
     }
 }
