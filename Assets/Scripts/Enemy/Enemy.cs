@@ -57,10 +57,7 @@ public class Enemy : Entity
 
     private void KillEnemy()
     {
-        if (CurrentTile is RoadTile roadTile)
-        {
-            roadTile.Corrupt(_corruptionRate);
-        }
+        TileManager.Instance.EnemyDead(transform.position, _corruptionRate);
 
         // bunch of stuff here
     }

@@ -43,6 +43,14 @@ public class TileManager : Singleton<TileManager>
     {
         _specialTilemap.SetTile(position, _tourSupportTile);
     }
+
+    public void EnemyDead(Vector3 position, float damage)
+    {
+        Vector3Int tilePosition = _specialTilemap.WorldToCell(position);
+        GameObject go = _specialTilemap.GetInstantiatedObject(tilePosition);
+        RoadTileData roadTileData = go.GetComponent<RoadTileData>();
+        roadTileData.ChangeCorruption(damage);
+    }
     
 
     private void Init()
