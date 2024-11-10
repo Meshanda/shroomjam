@@ -96,4 +96,31 @@ public abstract class Tower : Corruptible
 
         ResetAggro();
     }
+
+    public void BoostAttackSpeed(float boostRate, float duration)
+    {
+        // Change attack speed for the duration
+        float oldAttackSpeed = AttackSpeed;
+        AttackSpeed += AttackSpeed * boostRate;
+        StartCoroutine(ChangeAttackSpeedCoroutine(duration, oldAttackSpeed));
+    }
+
+    private IEnumerator ChangeAttackSpeedCoroutine(float waitDuration, float oldAttackSpeed)
+    {
+        yield return new WaitForSeconds(waitDuration);
+        AttackSpeed = oldAttackSpeed;
+    }
+
+    public void ShieldTower(float shieldRate, float duration)
+    {
+        float oldDefensiveRate = CorruptionRate;
+        CorruptionRate -= CorruptionRate * shieldRate;
+        StartCoroutine(ChangeDefensiveRateCoroutine(duration, oldDefensiveRate));
+    }
+    
+    private IEnumerator ChangeDefensiveRateCoroutine(float waitDuration, float oldAttackSpeed)
+    {
+        yield return new WaitForSeconds(waitDuration);
+        CorruptionRate = oldAttackSpeed;
+    }
 }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class CharacterPower : MonoBehaviour
@@ -18,29 +19,55 @@ public class CharacterPower : MonoBehaviour
 
     public void OnClean()
     {
-        Collider2D[] overlapResults = Physics2D.OverlapCircleAll(transform.position, _cleanData.Range / 2);
-        if (overlapResults.Length > 0)
-        {
-            // Some results
-            foreach (Collider2D collider in overlapResults)
-            {
-                if (collider.gameObject.layer == LayerMask.NameToLayer("Corruptible"))
-                {
-                    Corruptible corruptible = collider.GetComponentInParent<Corruptible>();
-                    corruptible.DeCorrupt(_cleanData.Value);
-                }
-            }
-        }
+        CheckOverlapCircle(_cleanData, CleanCallback);
     }
 
     public void OnShield()
     {
-        Debug.Log("Shield");
+        CheckOverlapCircle(_shieldData, ShieldCallback);
     }
 
     public void OnBoost()
     {
-        Debug.Log("Boost");
+        CheckOverlapCircle(_boostData, BoostCallback);
+    }
+
+    private void CleanCallback(Collider2D collider2d, PowerData data)
+    {
+        Corruptible corruptible = collider2d.GetComponentInParent<Corruptible>();
+        corruptible.DeCorrupt(data.Value);
+    }
+
+    private void ShieldCallback(Collider2D collider2d, PowerData data)
+    {
+        if(!collider2d.CompareTag("Tower")) return;
+        
+        Tower tower = collider2d.GetComponentInParent<Tower>();
+        tower.ShieldTower(data.Value, data.Duration);
+    }
+
+    private void BoostCallback(Collider2D collider2d, PowerData data)
+    {
+        if(!collider2d.CompareTag("Tower")) return;
+
+        Tower tower = collider2d.GetComponentInParent<Tower>();
+        tower.BoostAttackSpeed(data.Value, data.Duration);
+    }
+    
+    private void CheckOverlapCircle(PowerData powerData, Action<Collider2D, PowerData> callback)
+    {
+        Collider2D[] overlapResults = Physics2D.OverlapCircleAll(transform.position, powerData.Range / 2);
+        if (overlapResults.Length > 0)
+        {
+            // Some results
+            foreach (Collider2D collider2d in overlapResults)
+            {
+                if (collider2d.gameObject.layer == LayerMask.NameToLayer("Corruptible"))
+                {
+                    callback?.Invoke(collider2d, powerData);
+                }
+            }
+        }
     }
 
     public void OnClickButton(Enums.PowerType powerType)
