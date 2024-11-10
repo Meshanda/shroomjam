@@ -2178,6 +2178,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3735949478389697797, guid: 3d096c04ce0bef241a7124e97ad29bd9, type: 3}
+      propertyPath: _boostDataSo
+      value: 
+      objectReference: {fileID: 11400000, guid: f381ca3abba437b4aaae346854df5e2a, type: 2}
+    - target: {fileID: 3735949478389697797, guid: 3d096c04ce0bef241a7124e97ad29bd9, type: 3}
+      propertyPath: _cleanDataSo
+      value: 
+      objectReference: {fileID: 11400000, guid: adcabdeabe64b024787469a65940df26, type: 2}
+    - target: {fileID: 3735949478389697797, guid: 3d096c04ce0bef241a7124e97ad29bd9, type: 3}
+      propertyPath: _shieldDataSo
+      value: 
+      objectReference: {fileID: 11400000, guid: 691979cdb52d8d049a19da4b04851936, type: 2}
+    - target: {fileID: 3735949478389697797, guid: 3d096c04ce0bef241a7124e97ad29bd9, type: 3}
       propertyPath: _boostData.Value
       value: 0.3
       objectReference: {fileID: 0}
@@ -2192,6 +2204,14 @@ PrefabInstance:
     - target: {fileID: 3735949478389697797, guid: 3d096c04ce0bef241a7124e97ad29bd9, type: 3}
       propertyPath: _shieldData.Duration
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3735949478389697797, guid: 3d096c04ce0bef241a7124e97ad29bd9, type: 3}
+      propertyPath: _cleanDataSo.IsAvailable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3735949478389697797, guid: 3d096c04ce0bef241a7124e97ad29bd9, type: 3}
+      propertyPath: _cleanDataSo.CurrentCooldown
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4120261053425401668, guid: 3d096c04ce0bef241a7124e97ad29bd9, type: 3}
       propertyPath: m_LocalPosition.x

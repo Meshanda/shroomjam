@@ -1,62 +1,124 @@
 using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Serialization;
 
 public class CharacterPower : MonoBehaviour
 {
+    public static Action<bool, Enums.PowerType> OnPointerHoverSpellButton;
+    public static Action<Enums.PowerType> OnClickSpellButton;
+    
     [SerializeField] private GameObject _powerVisualizer;
 
+    [FormerlySerializedAs("cleanDataSo")]
     [Header("Data")]
-    [SerializeField] private PowerData _cleanData;
-    [SerializeField] private PowerData _shieldData;
-    [SerializeField] private PowerData _boostData;
-    
-    
+    [SerializeField] private PowerDataSO _cleanDataSo;
+    [SerializeField] private PowerDataSO _shieldDataSo;
+    [SerializeField] private PowerDataSO _boostDataSo;
+
+    private void OnEnable()
+    {
+        OnPointerHoverSpellButton += OnPointerHoverSpellButtonHandler;
+        OnClickSpellButton += OnClickSpellButtonHandler;
+    }
+
+    private void OnDisable()
+    {
+        OnPointerHoverSpellButton -= OnPointerHoverSpellButtonHandler;
+        OnClickSpellButton -= OnClickSpellButtonHandler;
+    }
 
     private void Awake()
     {
-        DisplayPowerVisualize(false);
+        DisplayAreaOfEffect(false);
+
+        InitPowerSO();
     }
 
     public void OnClean()
     {
-        CheckOverlapCircle(_cleanData, CleanCallback);
+        OnAbility(_cleanDataSo, CleanCallback);
     }
 
     public void OnShield()
     {
-        CheckOverlapCircle(_shieldData, ShieldCallback);
+        OnAbility(_shieldDataSo, ShieldCallback);
     }
 
     public void OnBoost()
     {
-        CheckOverlapCircle(_boostData, BoostCallback);
+        OnAbility(_boostDataSo, BoostCallback);
     }
 
-    private void CleanCallback(Collider2D collider2d, PowerData data)
+    private void InitPowerSO()
+    {
+        _cleanDataSo.InitData();
+        _shieldDataSo.InitData();
+        _boostDataSo.InitData();
+    }
+
+    private void OnAbility(PowerDataSO ability, Action<Collider2D, PowerDataSO> callback)
+    {
+        if (ability.IsAvailable)
+        {
+            LaunchAbility(ability, callback);
+            StartCoroutine(CooldownCoroutine(ability));
+        }
+        else
+        {
+            // Can do something here when an ability is not available ...
+            Debug.Log("Ability " + ability.PowerType + " is not available !");
+        }
+    }
+
+    private IEnumerator CooldownCoroutine(PowerDataSO ability)
+    {
+        ability.IsAvailable = false;
+        // Debug.Log("Ability " + ability.PowerType + " used !");
+        
+        float elapsedTime = 0f;
+
+        while (elapsedTime < ability.Cooldown)
+        {
+            elapsedTime += Time.deltaTime;
+            
+            ability.RemainingTime = ability.Cooldown - elapsedTime;
+            
+            // Debug.Log("Ability " + ability.PowerType + " : " + ability.RemainingTime.ToString("F1") + "s");
+            
+            yield return null;
+        }
+        
+        ability.IsAvailable = true;
+        Debug.Log("Ability " + ability.PowerType + " ready !");
+    }
+
+    private void CleanCallback(Collider2D collider2d, PowerDataSO dataSo)
     {
         Corruptible corruptible = collider2d.GetComponentInParent<Corruptible>();
-        corruptible.DeCorrupt(data.Value);
+        corruptible.DeCorrupt(dataSo.Value);
     }
 
-    private void ShieldCallback(Collider2D collider2d, PowerData data)
+    private void ShieldCallback(Collider2D collider2d, PowerDataSO dataSo)
     {
         if(!collider2d.CompareTag("Tower")) return;
         
         Tower tower = collider2d.GetComponentInParent<Tower>();
-        tower.ShieldTower(data.Value, data.Duration);
+        tower.ShieldTower(dataSo.Value, dataSo.Duration);
     }
 
-    private void BoostCallback(Collider2D collider2d, PowerData data)
+    private void BoostCallback(Collider2D collider2d, PowerDataSO dataSo)
     {
         if(!collider2d.CompareTag("Tower")) return;
 
         Tower tower = collider2d.GetComponentInParent<Tower>();
-        tower.BoostAttackSpeed(data.Value, data.Duration);
+        tower.BoostAttackSpeed(dataSo.Value, dataSo.Duration);
     }
     
-    private void CheckOverlapCircle(PowerData powerData, Action<Collider2D, PowerData> callback)
+    private void LaunchAbility(PowerDataSO powerDataSo, Action<Collider2D, PowerDataSO> callback)
     {
-        Collider2D[] overlapResults = Physics2D.OverlapCircleAll(transform.position, powerData.Range / 2);
+        Collider2D[] overlapResults = Physics2D.OverlapCircleAll(transform.position, powerDataSo.Range / 2);
         if (overlapResults.Length > 0)
         {
             // Some results
@@ -64,13 +126,29 @@ public class CharacterPower : MonoBehaviour
             {
                 if (collider2d.gameObject.layer == LayerMask.NameToLayer("Corruptible"))
                 {
-                    callback?.Invoke(collider2d, powerData);
+                    callback?.Invoke(collider2d, powerDataSo);
                 }
             }
         }
     }
 
-    public void OnClickButton(Enums.PowerType powerType)
+    private void OnPointerHoverSpellButtonHandler(bool enter, Enums.PowerType powerType)
+    {
+        float value = 1f;
+        if (enter)
+        {
+            value = powerType switch
+            {
+                Enums.PowerType.Heal => _cleanDataSo.Range,
+                Enums.PowerType.Shield => _shieldDataSo.Range,
+                Enums.PowerType.Boost => _boostDataSo.Range,
+            };
+        }
+        
+        DisplayAreaOfEffect(enter, value);
+    }
+
+    private void OnClickSpellButtonHandler(Enums.PowerType powerType)
     {
         switch(powerType)
         {
@@ -85,37 +163,11 @@ public class CharacterPower : MonoBehaviour
                 break;
         }
     }
-    
-    public void OnButtonHoverEnter(Enums.PowerType powerType)
-    {
-        float value = powerType switch
-        {
-            Enums.PowerType.Heal => _cleanData.Range,
-            Enums.PowerType.Shield => _shieldData.Range,
-            Enums.PowerType.Boost => _boostData.Range,
-        };
 
-        DisplayAreaOfEffect(value);
-    }
-    
-    public void OnButtonHoverExit()
+    private void DisplayAreaOfEffect(bool visible, float value = 1f)
     {
-        DisplayPowerVisualize(false);
-    }
-
-    private void DisplayAreaOfEffect(float value)
-    {
-        DisplayPowerVisualize(true);
-        ModifyCircleVisualisation(value);
-    }
-
-    private void DisplayPowerVisualize(bool value)
-    {
-        _powerVisualizer.SetActive(value);
-    }
-
-    private void ModifyCircleVisualisation(float value)
-    {
-        _powerVisualizer.transform.localScale = new Vector3(value, value, 1);
+        _powerVisualizer.SetActive(visible);
+        if(visible)
+            _powerVisualizer.transform.localScale = new Vector3(value, value, 1);
     }
 }
