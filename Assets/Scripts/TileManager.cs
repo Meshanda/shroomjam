@@ -48,8 +48,8 @@ public class TileManager : Singleton<TileManager>
     {
         Vector3Int tilePosition = _specialTilemap.WorldToCell(position);
         GameObject go = _specialTilemap.GetInstantiatedObject(tilePosition);
-        RoadTileData roadTileData = go.GetComponent<RoadTileData>();
-        roadTileData.ChangeCorruption(damage);
+        Road road = go.GetComponent<Road>();
+        road.ChangeCorruption(damage);
     }
 
     private void Init()
