@@ -49,6 +49,9 @@ public class CorruptionStateHandler
 
     public CorruptionStateHandler(List<CorruptionState> states)
     {
+        if (states.Count <= 0)
+            return;
+        
         // if no state start at 0 put a default state
         if (states[0].CorruptionPercentage != 0.0f)
         {
