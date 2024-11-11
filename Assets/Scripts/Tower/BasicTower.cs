@@ -1,4 +1,4 @@
-﻿public class BasicTower : Tower
+﻿public class BasicTower : AttackTower
 {
     
 }
