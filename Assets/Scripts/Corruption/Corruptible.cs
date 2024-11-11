@@ -49,6 +49,22 @@ public class CorruptionStateHandler
 
     public CorruptionStateHandler(List<CorruptionState> states)
     {
+        // if no state start at 0 put a default state
+        if (states[0].CorruptionPercentage != 0.0f)
+        {
+            _currentState = new CorruptionStateList
+            {
+                State = new CorruptionState()
+                {
+                    CorruptionPercentage = 0.0f,
+                }
+            };
+            
+            _currentState.State.SetRange(states[0].CorruptionPercentage);
+            _currentState.NextState = ConstructNextHandler(states,  null);
+            return;
+        }
+        
         _currentState = ConstructNextHandler(states,  null);
         
     }
@@ -62,7 +78,7 @@ public class CorruptionStateHandler
                 State = states[0],
                 PreviousState = currentState
             };
-            Debug.Log($"bouh {states}");
+            
             if(states.Count > 1)
             {
                 newStateList.State.SetRange(states[1].CorruptionPercentage);
