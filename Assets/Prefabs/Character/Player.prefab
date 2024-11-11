@@ -164,7 +164,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c6bcc09ae38486bbf7daa23720b3f15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxCorruption: 0.1
+  _corruptionStates:
+  - OnCorruptionStateEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3953352293217622232}
+          m_TargetAssemblyTypeName: CharacterMovement, Assembly-CSharp
+          m_MethodName: ReverseInput
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    CorruptionPercentage: 0
+  - OnCorruptionStateEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3953352293217622232}
+          m_TargetAssemblyTypeName: CharacterMovement, Assembly-CSharp
+          m_MethodName: ReverseInput
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    CorruptionPercentage: 0.75
+  _maxCorruption: 20
 --- !u!61 &37829441166189683
 BoxCollider2D:
   m_ObjectHideFlags: 0
