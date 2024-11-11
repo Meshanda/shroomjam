@@ -53,7 +53,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 3160924892847000201}
           m_TargetAssemblyTypeName: AttackTower, Assembly-CSharp
-          m_MethodName: OnCorrupted
+          m_MethodName: OnDecorrupted
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -69,7 +69,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 3160924892847000201}
           m_TargetAssemblyTypeName: AttackTower, Assembly-CSharp
-          m_MethodName: OnDecorrupted
+          m_MethodName: OnCorrupted
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
