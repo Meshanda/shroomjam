@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5416372819577579200}
   - component: {fileID: 6191821470178710075}
   - component: {fileID: 7021149229159831129}
+  - component: {fileID: 7893934071586102159}
   m_Layer: 0
   m_Name: Square (1)
   m_TagString: Untagged
@@ -151,6 +152,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &7893934071586102159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919516928790222281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf56984881ad462ab615789237536a99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _header: Fast Tower
+  _content: This is a tower. It does something. To be Explained
+  _delay: 0.1
 --- !u!1 &1838160950203095230
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,6 +565,7 @@ GameObject:
   - component: {fileID: 5411440173586389046}
   - component: {fileID: 6779991098957267512}
   - component: {fileID: 7899060169963079631}
+  - component: {fileID: 7055984625294004229}
   m_Layer: 0
   m_Name: Square (2)
   m_TagString: Untagged
@@ -688,6 +705,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &7055984625294004229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4381900761560077501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf56984881ad462ab615789237536a99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _header: Sniper Tower
+  _content: This is a tower. It does something. To be Explained
+  _delay: 0.1
 --- !u!1 &5089596038284534628
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,6 +732,7 @@ GameObject:
   - component: {fileID: 712253436841385760}
   - component: {fileID: 9157453224755771381}
   - component: {fileID: 3565186473442573169}
+  - component: {fileID: 1199374772573154708}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -839,6 +872,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1199374772573154708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5089596038284534628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf56984881ad462ab615789237536a99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _header: Basic Tower
+  _content: This is a tower. It does something. To be Explained
+  _delay: 0.1
 --- !u!1 &5181573467170383843
 GameObject:
   m_ObjectHideFlags: 0
@@ -1342,6 +1390,7 @@ GameObject:
   - component: {fileID: 4017985704697298700}
   - component: {fileID: 312815464860575699}
   - component: {fileID: 7992016346128758246}
+  - component: {fileID: 7051382511411140319}
   m_Layer: 0
   m_Name: Square (3)
   m_TagString: Untagged
@@ -1481,3 +1530,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &7051382511411140319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8410435358915862755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf56984881ad462ab615789237536a99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _header: Support Tower
+  _content: This is a tower. It does something. To be Explained
+  _delay: 0.1
