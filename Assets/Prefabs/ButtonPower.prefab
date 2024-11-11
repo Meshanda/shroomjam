@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 587831756418098810}
   - component: {fileID: 5404169894122092694}
+  - component: {fileID: 564262960522658573}
   m_Layer: 5
   m_Name: ButtonPower
   m_TagString: Untagged
@@ -49,8 +50,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b291feedb5bcf14294e7ad5f00cd827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _characterPower: {fileID: 0}
   _powerType: 0
+--- !u!114 &564262960522658573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900245140614143828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf56984881ad462ab615789237536a99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _header: 
+  _content: I
+  _delay: 0.1
 --- !u!1 &1606782850701515192
 GameObject:
   m_ObjectHideFlags: 0
