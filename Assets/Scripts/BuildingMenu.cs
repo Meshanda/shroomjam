@@ -17,6 +17,12 @@ public class BuildingMenu : MonoBehaviour
     
     public void OnButtonClicked(Enums.TowerType towerType)
     {
+        var cost = GameManager.Instance.GetTowerCost(towerType);
+        MoneyManager.SpendMoney?.Invoke(cost, () => BuildTower(towerType));
+    }
+
+    private void BuildTower(Enums.TowerType towerType)
+    {
         OnTowerBuilt?.Invoke(towerType);
         
         switch (towerType)
