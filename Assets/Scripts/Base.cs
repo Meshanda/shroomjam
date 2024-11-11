@@ -11,6 +11,7 @@ public class Base : Corruptible
             if (enemy == null) return;
             
             Corrupt(enemy.CorruptionRate);
+            enemy.DestroySelf();
         
             // Check if it's game over
             if (Corruption > MaxCorruption)

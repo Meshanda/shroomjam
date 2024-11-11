@@ -87,9 +87,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3573447704870786077}
+  - component: {fileID: 321648170886892117}
   - component: {fileID: 8039861744426856027}
-  - component: {fileID: 2022857673756219083}
-  - component: {fileID: 6363720042721931599}
+  - component: {fileID: 5130259273938042228}
   m_Layer: 0
   m_Name: Road
   m_TagString: Untagged
@@ -113,6 +113,101 @@ Transform:
   - {fileID: 3743334095730918927}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &321648170886892117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5575223175206741922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d14a8f1a1dbdf047894f7860651b76d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _corruptionStates:
+  - OnCorruptionStateEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8039861744426856027}
+          m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1882085707398116769, guid: eb9c0cefc16e27149ab79c05f7feb2bf, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    CorruptionPercentage: 0
+  - OnCorruptionStateEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8039861744426856027}
+          m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: -3179475428647613145, guid: f42343bd72b52784390c2cb58fd9cc39, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    CorruptionPercentage: 0.1
+  - OnCorruptionStateEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8039861744426856027}
+          m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 3216038519745011095, guid: e9b0aaa383a8c32408e53b13054a682d, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    CorruptionPercentage: 0.3
+  - OnCorruptionStateEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8039861744426856027}
+          m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8110289729868216872, guid: 15a4a24f5c07ad444bca63e81eea08ec, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    CorruptionPercentage: 0.6
+  - OnCorruptionStateEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8039861744426856027}
+          m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 5573132427931082031, guid: 6f9560f77aeede6489b0c4858020eea3, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    CorruptionPercentage: 0.9
+  _maxCorruption: 10
+  _spriteRenderer: {fileID: 8039861744426856027}
 --- !u!212 &8039861744426856027
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -156,7 +251,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 1882085707398116769, guid: eb9c0cefc16e27149ab79c05f7feb2bf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -168,7 +263,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2022857673756219083
+--- !u!61 &5130259273938042228
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -214,17 +309,3 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &6363720042721931599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5575223175206741922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d14a8f1a1dbdf047894f7860651b76d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _corruptionStates: []
-  _maxCorruption: 0.1

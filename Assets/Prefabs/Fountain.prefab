@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3573447704870786077}
-  - component: {fileID: 418380115565243420}
-  - component: {fileID: 6106124669118709887}
-  - component: {fileID: 730695722281198238}
+  - component: {fileID: 8633021749081349497}
+  - component: {fileID: 8039861744426856027}
+  - component: {fileID: 5130259273938042228}
   m_Layer: 0
-  m_Name: Base
+  m_Name: Fountain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,7 +34,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &418380115565243420
+--- !u!114 &8633021749081349497
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,11 +43,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5575223175206741922}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67a699465f52e914ba4b21823aabf257, type: 3}
+  m_Script: {fileID: 11500000, guid: f61707a515bfa5143a006797c6446a05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxCorruption: 100
---- !u!212 &6106124669118709887
+  _corruptionHealValue: 1
+  _corruptionHealSpeed: 1
+--- !u!212 &8039861744426856027
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,19 +91,19 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 8
-  m_Sprite: {fileID: -1213363577337030719, guid: cea716e6690bc6d40b68df3fe6256317, type: 3}
+  m_SortingOrder: 5
+  m_Sprite: {fileID: -6056038591643079516, guid: 992284f6abd14474397242a7590f9954, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.89, y: 0.91}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &730695722281198238
+--- !u!61 &5130259273938042228
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,11 +141,11 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.89, y: 0.91}
-    newSize: {x: 0.89, y: 0.91}
+    oldSize: {x: 0.52, y: 0.73}
+    newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.89, y: 0.91}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
