@@ -146,7 +146,7 @@ public class CorruptionStateHandler
             return currentState;
         }
 
-        return SearchInPreviousState(corruptionPercentage, currentState.NextState);
+        return SearchInNextState(corruptionPercentage, currentState.NextState);
     }
 }
 
