@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 [CreateAssetMenu(menuName = "CustomTile/RoadTile")]
-public class RoadTile : CorruptibleTile
+public class RoadTile : CustomTile
 {
     public override void OnTile(Entity entity)
     {
