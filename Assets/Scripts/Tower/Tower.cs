@@ -23,7 +23,6 @@ public abstract class Tower : Corruptible
 
     protected CircleCollider2D _attackCollider;
 
-    
     private float _defaultCorruptionRate = 0f;
     private float _defaultAttackSpeed = 0f;
 
@@ -32,10 +31,7 @@ public abstract class Tower : Corruptible
         _attackCollider = GetComponent<CircleCollider2D>();
         _attackCollider.isTrigger = true;
         _attackCollider.radius = Range;
-    }
-    
-    private void Start()
-    {
+        
         _defaultCorruptionRate = CorruptionRate;
         _defaultAttackSpeed = AttackSpeed;
     }
