@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PowerType: 0
   Range: 3
-  Value: 10
-  Duration: 0
-  Cooldown: 3
+  Value: 1
+  Duration: 5
+  TimeTick: 0.5
+  Cooldown: 6

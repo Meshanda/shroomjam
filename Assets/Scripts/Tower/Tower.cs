@@ -25,6 +25,9 @@ public abstract class Tower : Corruptible
     private Enemy _currentTarget;
     private bool _isAttacking;
 
+    private float _defaultCorruptionRate = 0f;
+    private float _defaultAttackSpeed = 0f;
+
     private void Awake()
     {
         _attackCollider = GetComponent<CircleCollider2D>();
@@ -32,6 +35,12 @@ public abstract class Tower : Corruptible
         _attackCollider.radius = Range;
         
         _isAttacking = false;
+    }
+
+    private void Start()
+    {
+        _defaultCorruptionRate = CorruptionRate;
+        _defaultAttackSpeed = AttackSpeed;
     }
 
     private void Update()
@@ -97,30 +106,25 @@ public abstract class Tower : Corruptible
         ResetAggro();
     }
 
-    public void BoostAttackSpeed(float boostRate, float duration)
+    public void AddShieldToTower(float shieldRate)
     {
-        // Change attack speed for the duration
-        float oldAttackSpeed = AttackSpeed;
-        AttackSpeed += AttackSpeed * boostRate;
-        StartCoroutine(ChangeAttackSpeedCoroutine(duration, oldAttackSpeed));
-    }
-
-    private IEnumerator ChangeAttackSpeedCoroutine(float waitDuration, float oldAttackSpeed)
-    {
-        yield return new WaitForSeconds(waitDuration);
-        AttackSpeed = oldAttackSpeed;
-    }
-
-    public void ShieldTower(float shieldRate, float duration)
-    {
-        float oldDefensiveRate = CorruptionRate;
         CorruptionRate -= CorruptionRate * shieldRate;
-        StartCoroutine(ChangeDefensiveRateCoroutine(duration, oldDefensiveRate));
+    }
+
+    public void RemoveShieldFromTower()
+    {
+        CorruptionRate = _defaultCorruptionRate;
     }
     
-    private IEnumerator ChangeDefensiveRateCoroutine(float waitDuration, float oldAttackSpeed)
+    public void AddAttackSpeed(float attackSpeedRate)
     {
-        yield return new WaitForSeconds(waitDuration);
-        CorruptionRate = oldAttackSpeed;
+        AttackSpeed += AttackSpeed * attackSpeedRate;
     }
+
+    public void RemoveAttackSpeed()
+    {
+        AttackSpeed = _defaultAttackSpeed;
+    }
+
+
 }

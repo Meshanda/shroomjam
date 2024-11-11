@@ -5,21 +5,22 @@ public class PowerDataSO : ScriptableObject
 {
     public Enums.PowerType PowerType;
     public float Range;
+    
     public float Value;
     public float Duration;
-    [Tooltip("In seconds")] 
+    public float TimeTick;
+    
     public float Cooldown;
 
-    [Space(10)]
-    private float _remainingTime;
+    private float _remainingTimeCooldown;
     private bool _isAvailable;
 
-    public float RemainingTime { get => _remainingTime; set => _remainingTime = value; }
+    public float RemainingTimeCooldown { get => _remainingTimeCooldown; set => _remainingTimeCooldown = value; }
     public bool IsAvailable { get => _isAvailable; set => _isAvailable = value; }
 
     public void InitData()
     {
         _isAvailable = true;
-        _remainingTime = 0f;
+        _remainingTimeCooldown = 0f;
     }
 }

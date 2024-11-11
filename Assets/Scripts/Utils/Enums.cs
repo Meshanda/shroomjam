@@ -16,7 +16,7 @@
 
     public enum PowerType
     {
-        Heal,
+        Clean,
         Shield,
         Boost
     };

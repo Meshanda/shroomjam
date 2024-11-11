@@ -16,6 +16,5 @@ MonoBehaviour:
   Range: 2
   Value: 0.3
   Duration: 5
-  Cooldown: 10
-  RemainingTime: 0
-  IsAvailable: 1
+  TimeTick: 1
+  Cooldown: 7
