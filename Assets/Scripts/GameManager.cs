@@ -5,6 +5,7 @@ using UnityEngine.Tilemaps;
 public class GameManager : Singleton<GameManager>
 {
     public static Action<Enums.GameOverType> OnGameOver;
+    public static Action OnGameWin;
     public static Action<float> OnEnemyHitBase;
 
     private void OnEnable()

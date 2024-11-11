@@ -14,7 +14,7 @@ public class Base : Corruptible
             enemy.DestroySelf();
         
             // Check if it's game over
-            if (Corruption > MaxCorruption)
+            if (Corruption >= MaxCorruption)
             {
                 // Game Over : Call the event for "Game Over"
                 GameManager.OnGameOver?.Invoke(Enums.GameOverType.BaseDestroyed);

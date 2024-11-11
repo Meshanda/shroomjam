@@ -48,6 +48,13 @@ public class TileManager : Singleton<TileManager>
     {
         Vector3Int tilePosition = _specialTilemap.WorldToCell(position);
         GameObject go = _specialTilemap.GetInstantiatedObject(tilePosition);
+        
+        if(!go.GetComponent<Road>())
+        {
+            Debug.LogError($"{go.name} is not a road");
+            return;
+        }
+        
         Road road = go.GetComponent<Road>();
         road.ChangeCorruption(damage);
     }

@@ -18,9 +18,24 @@ MonoBehaviour:
     Delay: 0
   - EnemyReference: {fileID: 11400000, guid: dc85044615d2e5240bb6f38eca4dfcc9, type: 2}
     SpawnerIndex: 0
-    Delay: 5
+    Delay: 0.5
   - EnemyReference: {fileID: 11400000, guid: dc85044615d2e5240bb6f38eca4dfcc9, type: 2}
     SpawnerIndex: 0
-    Delay: 5
+    Delay: 0
+  - EnemyReference: {fileID: 11400000, guid: dc85044615d2e5240bb6f38eca4dfcc9, type: 2}
+    SpawnerIndex: 0
+    Delay: 1
+  - EnemyReference: {fileID: 11400000, guid: dc85044615d2e5240bb6f38eca4dfcc9, type: 2}
+    SpawnerIndex: 0
+    Delay: 2
+  - EnemyReference: {fileID: 11400000, guid: dc85044615d2e5240bb6f38eca4dfcc9, type: 2}
+    SpawnerIndex: 0
+    Delay: 0
+  - EnemyReference: {fileID: 11400000, guid: dc85044615d2e5240bb6f38eca4dfcc9, type: 2}
+    SpawnerIndex: 0
+    Delay: 0
+  - EnemyReference: {fileID: 11400000, guid: dc85044615d2e5240bb6f38eca4dfcc9, type: 2}
+    SpawnerIndex: 0
+    Delay: 0
   WaveReward: 0
   IntendedSpawnerNumber: 1
