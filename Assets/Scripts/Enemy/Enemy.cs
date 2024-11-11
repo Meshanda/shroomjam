@@ -27,7 +27,7 @@ public class Enemy : Entity
     
     private List<Corruptible> _corruptiblesAround = new List<Corruptible>();
 
-    public static event Action<Enemy> OnDeath;
+    public Action<Enemy> OnDeath;
 
     public float Health
     {
@@ -58,16 +58,19 @@ public class Enemy : Entity
 
     private void Die()
     {
-		OnDeath?.Invoke(this);
-        
         TileManager.Instance.EnemyDead(transform.position, _corruptionRate);
 
+        MoneyManager.AddMoney?.Invoke(_earnedPoints);
         DestroySelf();
         
     }
+    
+    
 
     public void DestroySelf()
     {
+        OnDeath?.Invoke(this);
+
         Destroy(gameObject);
     }
 

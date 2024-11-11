@@ -7,10 +7,12 @@ public class Spawner : MonoBehaviour
     
     [SerializeField] private BezierSpline _spline;
     
-    public void Spawn(GameObject prefab, Tilemap tilemap)
+    public Enemy Spawn(GameObject prefab, Tilemap tilemap)
     {
-        Debug.Log("Spawned");
         var enemySpawned = Instantiate(prefab, transform.position, Quaternion.identity, transform);
-        enemySpawned.GetComponent<Enemy>().Setup(_spline, tilemap);
+        var enemy = enemySpawned.GetComponent<Enemy>();
+        enemy.Setup(_spline, tilemap);
+
+        return enemy;
     }
 }

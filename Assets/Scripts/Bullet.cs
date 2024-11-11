@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float _speed = 15f;
     
     private float _damage = 1f;
+    private float _corruption = 0.1f;
     private Transform _target;
     private CircleCollider2D _collider;
 
@@ -17,10 +18,11 @@ public class Bullet : MonoBehaviour
         _collider.isTrigger = true;
     }
 
-    public void Init(Transform target, float damage)
+    public void Init(Transform target, float damage, float corruption)
     {
         _target = target;
         _damage = damage;
+        _corruption = corruption;
     }
     
     private void Update()
@@ -39,9 +41,15 @@ public class Bullet : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.CompareTag("Enemy")) return;
+        if (other.CompareTag("Enemy"))
+        {
+            other.GetComponentInParent<Enemy>().TakeDamage(_damage);
+            Destroy(gameObject);
+        }
         
-        other.GetComponentInParent<Enemy>().TakeDamage(_damage);
-        Destroy(gameObject);
+        if (other.gameObject.layer.Equals(LayerMask.NameToLayer("Corruptible")))
+        {
+            other.GetComponent<Corruptible>().Corrupt(_corruption);
+        }
     }
 }

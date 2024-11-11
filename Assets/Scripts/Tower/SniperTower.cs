@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class SniperTower : Tower
+public class SniperTower : AttackTower
 {
     
 }

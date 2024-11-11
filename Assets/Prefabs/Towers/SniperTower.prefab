@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3299942553309475756}
   m_Layer: 7
   m_Name: Core
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 7036459207495301994}
   m_Layer: 0
   m_Name: SniperTower
-  m_TagString: Tower
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,9 +125,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 082ea7280fb94e05bee1798b52a3d2bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _corruptionStates:
+  - OnCorruptionStateEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 5043767000035726717}
+          m_TargetAssemblyTypeName: AttackTower, Assembly-CSharp
+          m_MethodName: OnDecorrupted
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    CorruptionPercentage: 0
+  - OnCorruptionStateEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 5043767000035726717}
+          m_TargetAssemblyTypeName: AttackTower, Assembly-CSharp
+          m_MethodName: OnCorrupted
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    CorruptionPercentage: 1
   _maxCorruption: 10
   _bulletPfb: {fileID: 6698104316039897986, guid: 95b6b5ab87f2d3543a8b6dedf663b9c9, type: 3}
   _damage: 3
+  _corruptionDamage: 0
   _range: 5
   _attackSpeed: 1
   _cost: 0

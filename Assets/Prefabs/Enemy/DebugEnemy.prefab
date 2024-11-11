@@ -79,7 +79,7 @@ MonoBehaviour:
   spline: {fileID: 0}
   travelMode: 0
   speed: 5
-  _shiftPower: 0.5
+  _shiftPower: 0.4
   m_normalizedT: 0
   rotationLerpModifier: 10
   lookAt: 0
@@ -113,10 +113,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tilemap: {fileID: 0}
   _speed: 3
-  _health: 10
-  _corruptionRate: 0.1
-  _corruptionSpeed: 0.1
-  _earnedPoints: 0
+  _health: 0.1
+  _corruptionRate: 1
+  _corruptionSpeed: 2
+  _earnedPoints: 5
 --- !u!58 &1284760993779737236
 CircleCollider2D:
   m_ObjectHideFlags: 0

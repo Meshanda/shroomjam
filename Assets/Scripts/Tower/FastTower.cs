@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class FastTower : Tower
+public class FastTower : AttackTower
 {
     
 }

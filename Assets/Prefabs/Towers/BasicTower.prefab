@@ -47,9 +47,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f66189b5a4f438ea1ad2c1123ddf697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _corruptionStates:
+  - OnCorruptionStateEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3160924892847000201}
+          m_TargetAssemblyTypeName: AttackTower, Assembly-CSharp
+          m_MethodName: OnDecorrupted
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    CorruptionPercentage: 0
+  - OnCorruptionStateEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3160924892847000201}
+          m_TargetAssemblyTypeName: AttackTower, Assembly-CSharp
+          m_MethodName: OnCorrupted
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    CorruptionPercentage: 1
   _maxCorruption: 10
   _bulletPfb: {fileID: 6698104316039897986, guid: 95b6b5ab87f2d3543a8b6dedf663b9c9, type: 3}
   _damage: 1
+  _corruptionDamage: 1
   _range: 3
   _attackSpeed: 2.5
   _cost: 0
