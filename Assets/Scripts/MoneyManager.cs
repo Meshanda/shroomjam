@@ -16,7 +16,7 @@ public class MoneyManager : MonoBehaviour
 
     private void Start() 
     {
-        _moneySO.value = StartingGold;
+        _moneySO.value = 500; // TODO: Change back later
         UpdateMoney?.Invoke(_moneySO.value);
     }
 
