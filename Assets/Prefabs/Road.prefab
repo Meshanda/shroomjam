@@ -88,8 +88,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3573447704870786077}
   - component: {fileID: 321648170886892117}
-  - component: {fileID: 927541876700724111}
+  - component: {fileID: 3050328076723024736}
   - component: {fileID: 8039861744426856027}
+  - component: {fileID: 5130259273938042228}
   m_Layer: 0
   m_Name: Road
   m_TagString: Untagged
@@ -125,8 +126,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d14a8f1a1dbdf047894f7860651b76d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _corruptionStates:
+  - OnCorruptionStateEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 321648170886892117}
+          m_TargetAssemblyTypeName: Road, Assembly-CSharp
+          m_MethodName: ChangeSprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 5573132427931082031, guid: 6f9560f77aeede6489b0c4858020eea3, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    CorruptionPercentage: 0
+  - OnCorruptionStateEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 321648170886892117}
+          m_TargetAssemblyTypeName: Road, Assembly-CSharp
+          m_MethodName: ChangeSprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: -3179475428647613145, guid: f42343bd72b52784390c2cb58fd9cc39, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    CorruptionPercentage: 0.5
+  - OnCorruptionStateEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 321648170886892117}
+          m_TargetAssemblyTypeName: Road, Assembly-CSharp
+          m_MethodName: ChangeSprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1882085707398116769, guid: eb9c0cefc16e27149ab79c05f7feb2bf, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    CorruptionPercentage: 1
   _maxCorruption: 10
---- !u!114 &927541876700724111
+  _spriteRenderer: {fileID: 8039861744426856027}
+--- !u!114 &3050328076723024736
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,16 +186,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5575223175206741922}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79454f8ab28f41058e58a5f515eb0353, type: 3}
+  m_Script: {fileID: 11500000, guid: a85c97fc206ed114bb813c8ef3d8d25d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _corruptible: {fileID: 321648170886892117}
   _spriteRenderer: {fileID: 8039861744426856027}
-  _defaultSprite: {fileID: 1882085707398116769, guid: eb9c0cefc16e27149ab79c05f7feb2bf, type: 3}
-  _lowCorruptSprite: {fileID: -3179475428647613145, guid: f42343bd72b52784390c2cb58fd9cc39, type: 3}
-  _midCorruptSprite: {fileID: 3216038519745011095, guid: e9b0aaa383a8c32408e53b13054a682d, type: 3}
-  _highCorruptSprite: {fileID: 8110289729868216872, guid: 15a4a24f5c07ad444bca63e81eea08ec, type: 3}
-  _corruptSprite: {fileID: 5573132427931082031, guid: 6f9560f77aeede6489b0c4858020eea3, type: 3}
 --- !u!212 &8039861744426856027
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -200,3 +245,49 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &5130259273938042228
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5575223175206741922}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
