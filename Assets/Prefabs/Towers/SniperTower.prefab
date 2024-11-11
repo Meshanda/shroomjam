@@ -127,9 +127,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxCorruption: 10
   _bulletPfb: {fileID: 6698104316039897986, guid: 95b6b5ab87f2d3543a8b6dedf663b9c9, type: 3}
-  _damage: 0
-  _range: 0
-  _attackSpeed: 0
+  _damage: 3
+  _range: 5
+  _attackSpeed: 1
   _cost: 0
 --- !u!212 &400075936732479335
 SpriteRenderer:

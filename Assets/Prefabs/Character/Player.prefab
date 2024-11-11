@@ -314,15 +314,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _powerVisualizer: {fileID: 328575038462079015}
-  _cleanData:
-    Range: 3
-    Value: 0.2
-  _shieldData:
-    Range: 2
-    Value: 0
-  _boostData:
-    Range: 1
-    Value: 0
+  _cleanDataSo: {fileID: 11400000, guid: adcabdeabe64b024787469a65940df26, type: 2}
+  _shieldDataSo: {fileID: 11400000, guid: 691979cdb52d8d049a19da4b04851936, type: 2}
+  _boostDataSo: {fileID: 11400000, guid: f381ca3abba437b4aaae346854df5e2a, type: 2}
 --- !u!1 &6064215716602699199
 GameObject:
   m_ObjectHideFlags: 0

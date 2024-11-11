@@ -52,6 +52,12 @@ public class Enemy : Entity
         
         TileManager.Instance.EnemyDead(transform.position, _corruptionRate);
 
+        DestroySelf();
+        
+    }
+
+    public void DestroySelf()
+    {
         Destroy(gameObject);
     }
 
