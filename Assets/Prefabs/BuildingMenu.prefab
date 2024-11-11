@@ -164,6 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf56984881ad462ab615789237536a99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 1
   _header: Fast Tower
   _content: This is a tower. It does something. To be Explained
   _delay: 0.1
@@ -717,6 +718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf56984881ad462ab615789237536a99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 1
   _header: Sniper Tower
   _content: This is a tower. It does something. To be Explained
   _delay: 0.1
@@ -884,6 +886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf56984881ad462ab615789237536a99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 1
   _header: Basic Tower
   _content: This is a tower. It does something. To be Explained
   _delay: 0.1
@@ -1542,6 +1545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf56984881ad462ab615789237536a99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 1
   _header: Support Tower
   _content: This is a tower. It does something. To be Explained
   _delay: 0.1

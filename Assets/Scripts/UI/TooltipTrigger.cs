@@ -5,6 +5,7 @@ using UnityEngine.Serialization;
 
 public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    public Enums.TooltipType Type;
     [SerializeField] private string _header;
     [SerializeField] [Multiline] private string _content;
     [SerializeField] private float _delay = .1f;
@@ -19,7 +20,7 @@ public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     {
         _coroutine = StartCoroutine(Utils.WaitRoutine(_delay, () =>
             {
-                TooltipSystem.Instance.Show(_content, _header);
+                TooltipSystem.Instance.Show(Type, _content, _header);
             }));
     }
 

@@ -20,4 +20,10 @@
         Shield,
         Boost
     };
+    
+    public enum TooltipType
+    {
+        Default,
+        BuildingMenu,
+    }
 }

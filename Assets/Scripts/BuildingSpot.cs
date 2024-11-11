@@ -71,5 +71,6 @@ public class BuildingSpot : MonoBehaviour
         
         Destroy(_buildingMenuInstance.gameObject);
         _buildingMenuInstance = null;
+        TooltipSystem.Instance.HideBuildingMenuButton();
     }
 }
