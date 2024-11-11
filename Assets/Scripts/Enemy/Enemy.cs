@@ -38,7 +38,17 @@ public class Enemy : Entity
     public float CorruptionRate => _corruptionRate;
 
     public float Speed => _speed;
-    
+
+    private void OnEnable()
+    {
+        StartCoroutine(Corrupt());
+    }
+
+    private void OnDisable()
+    {
+        StopCoroutine(Corrupt());
+    }
+
 
     public void Setup(BezierSpline spline, Tilemap tilemap)
     {
@@ -74,11 +84,6 @@ public class Enemy : Entity
             {
                 _corruptiblesAround.Add(corruptibleEntity);
             }
-            
-            if(_corruptiblesAround.Count == 1)
-            {
-                StartCoroutine(Corrupt());
-            }
         }
     }
 
@@ -90,18 +95,17 @@ public class Enemy : Entity
             {
                 _corruptiblesAround.Remove(corruptibleEntity);
             }
-            
-            if(_corruptiblesAround.Count == 0)
-            {
-                StopCoroutine(Corrupt());
-            }
         }
     }
 
     private IEnumerator Corrupt()
     {
-        while (_corruptiblesAround.Count >0)
+        while (true)
         {
+            yield return new WaitForSeconds(_corruptionSpeed);
+
+            if (_corruptiblesAround.Count == 0) continue;
+            
             var corruptiblesAroundCopy = new List<Corruptible>(_corruptiblesAround);
 
             foreach (var corruptibleEntity in corruptiblesAroundCopy)
@@ -109,7 +113,6 @@ public class Enemy : Entity
                 corruptibleEntity.Corrupt(_corruptionRate);
             }
 
-            yield return new WaitForSeconds(_corruptionSpeed);
         }
     }
 
