@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 
 public class ShieldPower : Power
@@ -15,6 +16,7 @@ public class ShieldPower : Power
         
         foreach (Tower tower in _towers)
         {
+            if(tower.IsCorrupted) continue;
             tower.AddShieldToTower(_dataSo.Value);
         }
 
@@ -27,7 +29,8 @@ public class ShieldPower : Power
         yield return new WaitForSeconds(_dataSo.Duration);
         
         foreach (Tower tower in _towers)
-        {
+        {            
+            if(tower.IsCorrupted) continue;
             tower.RemoveShieldFromTower();
         }
     }

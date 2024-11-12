@@ -15,6 +15,7 @@ public class AttackSpeedPower : Power
 
         foreach (Tower tower in _towers)
         {
+            if(tower.IsCorrupted) continue;
             tower.AddAttackSpeed(_dataSo.Value);
         }
 
@@ -28,6 +29,7 @@ public class AttackSpeedPower : Power
         
         foreach (Tower tower in _towers)
         {
+            if(tower.IsCorrupted) continue;
             tower.RemoveAttackSpeed();
         }
     }

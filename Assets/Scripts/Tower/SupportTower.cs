@@ -7,7 +7,6 @@ public class SupportTower : Tower
 {
     private List<Corruptible> _targetList = new ();
     private bool _isHealing;
-    private bool _isCorrupted;
     
     protected override void Awake()
     {
