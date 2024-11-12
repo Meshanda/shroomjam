@@ -20,6 +20,11 @@ public class Bullet : MonoBehaviour
         _collider.isTrigger = true;
     }
 
+    private void OnEnable()
+    {
+        Destroy(gameObject, 5f);
+    }
+
     public void Init(Transform target, float damage, float corruption, GameObject owner)
     {
         _target = target;
