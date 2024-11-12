@@ -27,6 +27,9 @@ public abstract class Power : MonoBehaviour
         {
             foreach (Collider2D collider2d in overlapResults)
             {
+                if (collider2d.CompareTag("Player")) 
+                    continue;
+                
                 if (collider2d.gameObject.layer == LayerMask.NameToLayer("Corruptible"))
                 {
                     if (tag != null)

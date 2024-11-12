@@ -69,7 +69,9 @@ public class AttackTower : Tower
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        Debug.Log($"{other.name} is on");
+        if(other.CompareTag("Road"))
+            return;
+
         if (_currentTarget != null) return; // If we already have a target
         
         if (!_isCorrupted && other.CompareTag("Enemy")) // If we are not corrupted and the other is an enemy

@@ -3,7 +3,11 @@ using UnityEngine;
 
 public class CorruptionStateHandler
 {
-    [SerializeField] private CorruptionStateList _currentState;
+    private CorruptionStateList _currentState;
+    
+    private bool _lastStateReached = false;
+
+    public bool LastStateReached => _lastStateReached;
 
     public CorruptionStateHandler(List<CorruptionState> states)
     {
@@ -62,6 +66,9 @@ public class CorruptionStateHandler
         if (_currentState != null && !_currentState.State.IsInRange(corruptionPercentage))
         {
             _currentState = SearchCurrentState(corruptionPercentage);
+            
+            _lastStateReached = _currentState.NextState == null;
+            
             _currentState.State.InvokeAction();
         }
     }

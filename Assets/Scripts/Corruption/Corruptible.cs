@@ -18,6 +18,8 @@ public abstract class Corruptible : MonoBehaviour
     
     public float CorruptionRate { get; protected set; } = 1f;
 
+    public bool LastStateReached => _corruptionStateHandler.LastStateReached;
+
     private void Start()
     {
         _corruptionStateHandler = new CorruptionStateHandler(_corruptionStates);
