@@ -7,7 +7,7 @@ public class RoadTile : CustomTile
 {
     public override void OnTile(Entity entity)
     {
-        Debug.Log("JE SUIS " + entity.name + " ET JE MARCHE SUR " + name);
+        
     }
     
 }

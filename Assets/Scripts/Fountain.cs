@@ -14,7 +14,7 @@ public class Fountain : MonoBehaviour
         if (!other.CompareTag("Player")) return;
         
         _isPlayerInside = true;
-        Character player = other.GetComponent<Character>(); 
+        Character player = other.GetComponentInParent<Character>(); 
         StartCoroutine(HealCorruptionCoroutine(player));
     }
 
