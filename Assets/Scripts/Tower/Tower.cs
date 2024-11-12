@@ -16,6 +16,8 @@ public abstract class Tower : Corruptible
     [SerializeField] private float _range;
     [SerializeField] private float _attackSpeed;
     [SerializeField] private int _cost;
+    
+    protected bool _isCorrupted;
 
     public float Damage { get => _damage; protected set => _damage = value; }
     public float CorruptionDamage { get => _corruptionDamage; protected set => _corruptionDamage = value; }
@@ -27,6 +29,8 @@ public abstract class Tower : Corruptible
 
     private float _defaultCorruptionRate = 0f;
     private float _defaultAttackSpeed = 0f;
+    
+    public bool IsCorrupted => _isCorrupted;
 
     protected virtual void Awake()
     {

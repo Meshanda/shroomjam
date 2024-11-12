@@ -7,9 +7,6 @@ public class AttackTower : Tower
     private bool _isAttacking;
     private Transform _currentTarget;
     private Corruptible _corruptibleTarget;
-    protected bool _isCorrupted;
-
-    
     
     protected override void Awake()
     {
