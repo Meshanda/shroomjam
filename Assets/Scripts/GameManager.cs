@@ -17,23 +17,39 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private FastTower _fastTowerPrefab;
     [SerializeField] private SniperTower _sniperTowerPrefab;
     [SerializeField] private SupportTower _supportTowerPrefab;
-
+    
+    [Header("Canvas")]
+    [SerializeField] private Canvas _hudCanvas;
+    [SerializeField] private Canvas _tooltipCanvas;
+    [SerializeField] private Canvas _endScreenCanvas;
+    
+    private EndScreen _endScreen;
+    
     private void OnEnable()
     {
         OnGameOver += OnGameOverHandler;
         OnEnemyHitBase += OnEnemyHitBaseHandler;
+        OnGameWin += OnGameWinHandler;
     }
 
     private void OnDisable()
     {
         OnGameOver -= OnGameOverHandler;
         OnEnemyHitBase -= OnEnemyHitBaseHandler;
-
+        OnGameWin -= OnGameWinHandler;
     }
     
+    private void Start()
+    {
+        _hudCanvas.gameObject.SetActive(true);
+        _tooltipCanvas.gameObject.SetActive(true);
+        _endScreenCanvas.gameObject.SetActive(false);
+    }
+
     protected override void SingletonAwake()
     {
         Init();
+        _endScreen = _endScreenCanvas.GetComponent<EndScreen>();
     }
 
     private void Init()
@@ -43,8 +59,28 @@ public class GameManager : Singleton<GameManager>
 
     private void OnGameOverHandler(Enums.GameOverType gameOverType)
     {
-        // You lose
-        Debug.Log("You lost because " + gameOverType + " lmao");
+        var subtitle = gameOverType switch
+        {
+            Enums.GameOverType.BaseDestroyed => "The base has been destroyed!",
+            Enums.GameOverType.PlayerDead => "You died!",
+            _ => throw new ArgumentOutOfRangeException(nameof(gameOverType), gameOverType, null)
+        };
+        
+        ToggleEndScreen(true);
+        _endScreen.Init("Game Over", subtitle);
+    }
+    
+    private void OnGameWinHandler()
+    {
+        ToggleEndScreen(true);
+        _endScreen.Init("You Win!", "Congratulations!");
+    }
+    
+    private void ToggleEndScreen(bool b)
+    {
+        _hudCanvas.gameObject.SetActive(!b);
+        _tooltipCanvas.gameObject.SetActive(!b);
+        _endScreenCanvas.gameObject.SetActive(b);
     }
 
     private void OnEnemyHitBaseHandler(float baseCorruption)
