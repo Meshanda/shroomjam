@@ -23,8 +23,19 @@ public class Enemy : Entity
     
     [Tooltip("money point gained after killing the enemy")]
     [SerializeField] private int _earnedPoints = 0;
+
+    [Tooltip("How much the mob boost himself when stepping on a corrupted road")]
+    [Range(1.0f, 20f)]
+    [SerializeField] private float _boostPower = 1.2f;
     
+    private EnemyPathController _pathController;
     
+
+    private bool _boosted = false;
+
+    public bool Boosted => _boosted;
+
+
     private List<Corruptible> _corruptiblesAround = new List<Corruptible>();
 
     public Action<Enemy> OnDeath;
@@ -47,6 +58,11 @@ public class Enemy : Entity
     private void OnDisable()
     {
         StopCoroutine(Corrupt());
+    }
+
+    private void Start()
+    {
+        _pathController = GetComponent<EnemyPathController>();
     }
 
 
@@ -81,6 +97,12 @@ public class Enemy : Entity
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if(other.CompareTag("Road") && other.GetComponentInParent<Corruptible>() is { } road)
+        {
+            
+            return;
+        }
+        
         if (other.gameObject.layer.CompareTo(LayerMask.NameToLayer("Corruptible")) == 0)
         {
             if (other.gameObject.GetComponentInParent<Corruptible>() is { } corruptibleEntity)
@@ -92,6 +114,9 @@ public class Enemy : Entity
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        if(other.CompareTag("Road"))
+            return;
+        
         if (other.gameObject.layer.CompareTo(LayerMask.NameToLayer("Corruptible")) == 0)
         {
             if (other.gameObject.GetComponentInParent<Corruptible>() is { } corruptibleEntity)
@@ -125,5 +150,24 @@ public class Enemy : Entity
         
         if (Health <= 0) 
             Die();
+    }
+    
+
+    public void Boost()
+    {
+        if (!_boosted)
+        {
+            _boosted = true;
+            _pathController.ChangeSpeed(_speed * _boostPower);
+        }
+    }
+
+    public void Deboost()
+    {
+        if (_boosted)
+        {
+            _boosted = false;
+            _pathController.ChangeSpeed(_speed);
+        }
     }
 }
