@@ -10,17 +10,20 @@ public class AttackSpeedPower : Power
     {
         if (!_dataSo.IsAvailable) return;
         
-        _colliders = CheckOverlapCircle(_dataSo.Range, "Tower");
-        _towers = GetGenericTypeList<Tower>();
-
-        foreach (Tower tower in _towers)
+        MoneyManager.SpendMoney?.Invoke(_dataSo.Cost, () =>
         {
-            if(tower.IsCorrupted) continue;
-            tower.AddAttackSpeed(_dataSo.Value);
-        }
+            _colliders = CheckOverlapCircle(_dataSo.Range, "Tower");
+            _towers = GetGenericTypeList<Tower>();
 
-        StartCoroutine(BoostCoroutine());
-        StartCoroutine(CooldownCoroutine(_dataSo));
+            foreach (Tower tower in _towers)
+            {
+                if(tower.IsCorrupted) continue;
+                tower.AddAttackSpeed(_dataSo.Value);
+            }
+
+            StartCoroutine(BoostCoroutine());
+            StartCoroutine(CooldownCoroutine(_dataSo));
+        });
     }
     
     private IEnumerator BoostCoroutine()

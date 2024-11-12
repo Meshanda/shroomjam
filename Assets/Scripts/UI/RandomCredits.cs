@@ -8,7 +8,7 @@ namespace UI
     public class RandomCredits : MonoBehaviour 
     {
         [SerializeField] private List<TextMeshProUGUI> _texts;
-        [SerializeField] private List<string> _devs; 
+        [SerializeField] [Multiline] private List<string> _devs; 
 
         private void Start()
         {

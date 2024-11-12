@@ -9,18 +9,21 @@ public class ShieldPower : Power
     public override void UseAbility()
     {
         if (!_dataSo.IsAvailable) return;
-        
-        _colliders = CheckOverlapCircle(_dataSo.Range, "Tower");
-        _towers = GetGenericTypeList<Tower>();
-        
-        foreach (Tower tower in _towers)
-        {
-            if(tower.IsCorrupted) continue;
-            tower.AddShieldToTower(_dataSo.Value);
-        }
 
-        StartCoroutine(ShieldCoroutine());
-        StartCoroutine(CooldownCoroutine(_dataSo));
+        MoneyManager.SpendMoney?.Invoke(_dataSo.Cost, () =>
+        {
+            _colliders = CheckOverlapCircle(_dataSo.Range, "Tower");
+            _towers = GetGenericTypeList<Tower>();
+        
+            foreach (Tower tower in _towers)
+            {
+                if(tower.IsCorrupted) continue;
+                tower.AddShieldToTower(_dataSo.Value);
+            }
+
+            StartCoroutine(ShieldCoroutine());
+            StartCoroutine(CooldownCoroutine(_dataSo));
+        });
     }
     
     private IEnumerator ShieldCoroutine()

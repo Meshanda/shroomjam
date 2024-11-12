@@ -11,6 +11,7 @@ public class PowerDataSO : ScriptableObject
     public float TimeTick;
     
     public float Cooldown;
+    public int Cost;
 
     private float _remainingTimeCooldown;
     private bool _isAvailable;

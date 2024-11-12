@@ -20,13 +20,16 @@ public class CleanPower : Power
     public override void UseAbility()
     {
         if (!_dataSo.IsAvailable) return;
-        
-        _colliders = CheckOverlapCircle(_dataSo.Range);
-        _corruptibles = GetGenericTypeList<Corruptible>();
+
+        MoneyManager.SpendMoney?.Invoke(_dataSo.Cost, () =>
+        {
+            _colliders = CheckOverlapCircle(_dataSo.Range);
+            _corruptibles = GetGenericTypeList<Corruptible>();
             
-        _cleanRemainingDuration = _dataSo.Duration;
-        _tick = 1f;
-        StartCoroutine(CooldownCoroutine(_dataSo));
+            _cleanRemainingDuration = _dataSo.Duration;
+            _tick = 1f;
+            StartCoroutine(CooldownCoroutine(_dataSo));
+        });
     }
     
     private void PowerHandle(float deltaTime)
