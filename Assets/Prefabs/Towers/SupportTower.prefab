@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 184561873775764022}
   - component: {fileID: 6637164662063640945}
   - component: {fileID: 3563698957448459480}
+  - component: {fileID: 469316605174868575}
   m_Layer: 0
   m_Name: SupportTower
   m_TagString: Untagged
@@ -82,6 +83,7 @@ MonoBehaviour:
     CorruptionPercentage: 1
   _maxCorruption: 10
   _bulletPfb: {fileID: 6698104316039897986, guid: 95b6b5ab87f2d3543a8b6dedf663b9c9, type: 3}
+  _core: {fileID: 1450972803626359763}
   _damage: 0
   _corruptionDamage: 0
   _range: 0
@@ -178,6 +180,33 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!50 &469316605174868575
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78262797679082704}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1450972803626359763
 GameObject:
   m_ObjectHideFlags: 0

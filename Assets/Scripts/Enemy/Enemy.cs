@@ -83,7 +83,7 @@ public class Enemy : Entity
     {
         if (other.gameObject.layer.CompareTo(LayerMask.NameToLayer("Corruptible")) == 0)
         {
-            if (other.gameObject.GetComponent<Corruptible>() is { } corruptibleEntity)
+            if (other.gameObject.GetComponentInParent<Corruptible>() is { } corruptibleEntity)
             {
                 _corruptiblesAround.Add(corruptibleEntity);
             }
@@ -94,7 +94,7 @@ public class Enemy : Entity
     {
         if (other.gameObject.layer.CompareTo(LayerMask.NameToLayer("Corruptible")) == 0)
         {
-            if (other.gameObject.GetComponent<Corruptible>() is { } corruptibleEntity)
+            if (other.gameObject.GetComponentInParent<Corruptible>() is { } corruptibleEntity)
             {
                 _corruptiblesAround.Remove(corruptibleEntity);
             }

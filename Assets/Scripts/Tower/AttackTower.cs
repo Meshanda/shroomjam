@@ -8,6 +8,8 @@ public class AttackTower : Tower
     private Transform _currentTarget;
     private Corruptible _corruptibleTarget;
     protected bool _isCorrupted;
+
+    
     
     protected override void Awake()
     {
@@ -50,7 +52,7 @@ public class AttackTower : Tower
         }
         
         var bullet = Instantiate(_bulletPfb, transform.position, Quaternion.identity).GetComponent<Bullet>();
-        bullet.Init(_currentTarget.transform, Damage, CorruptionDamage);
+        bullet.Init(_currentTarget.transform, Damage, CorruptionDamage, _core);
     }
 
     private void ResetAggro()
@@ -70,6 +72,7 @@ public class AttackTower : Tower
 
     private void OnTriggerStay2D(Collider2D other)
     {
+        Debug.Log($"{other.name} is on");
         if (_currentTarget != null) return; // If we already have a target
         
         if (!_isCorrupted && other.CompareTag("Enemy")) // If we are not corrupted and the other is an enemy
@@ -77,7 +80,7 @@ public class AttackTower : Tower
 
         if (_isCorrupted && other.gameObject.layer.Equals(LayerMask.NameToLayer("Corruptible"))) // If we are corrupted and the other is a corruptible
         {
-            _corruptibleTarget = other.GetComponent<Corruptible>();
+            _corruptibleTarget = other.GetComponentInParent<Corruptible>();
             if (_corruptibleTarget.Corruption >= _corruptibleTarget.MaxCorruption) return; // If the corruptible is already corrupted
 
             _corruptibleTarget.OnCorruptionMaxReached += ResetAggro;

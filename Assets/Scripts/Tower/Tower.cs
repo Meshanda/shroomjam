@@ -6,6 +6,8 @@ public abstract class Tower : Corruptible
 {
     [SerializeField] protected GameObject _bulletPfb;
     
+    [SerializeField] protected GameObject _core;
+    
     public Enums.TowerType Type { get; protected set; }
 
     [Header("Tower Stats")]

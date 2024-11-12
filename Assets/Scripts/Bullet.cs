@@ -12,17 +12,20 @@ public class Bullet : MonoBehaviour
     private Transform _target;
     private CircleCollider2D _collider;
 
+    private GameObject _owner;
+
     private void Awake()
     {
         _collider = GetComponent<CircleCollider2D>();
         _collider.isTrigger = true;
     }
 
-    public void Init(Transform target, float damage, float corruption)
+    public void Init(Transform target, float damage, float corruption, GameObject owner)
     {
         _target = target;
         _damage = damage;
         _corruption = corruption;
+        _owner = owner;
     }
     
     private void Update()
@@ -47,9 +50,14 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
         
-        if (other.gameObject.layer.Equals(LayerMask.NameToLayer("Corruptible")))
+        if (other.gameObject.layer.Equals(LayerMask.NameToLayer("Corruptible")) && other.gameObject != _owner)
         {
-            other.GetComponent<Corruptible>().Corrupt(_corruption);
+            var corruptibleCollided = other.GetComponentInParent<Corruptible>();
+            if (corruptibleCollided.Corruption >= corruptibleCollided.MaxCorruption) return;
+            
+            corruptibleCollided.Corrupt(_corruption);
+            Destroy(gameObject);
         }
+        
     }
 }
