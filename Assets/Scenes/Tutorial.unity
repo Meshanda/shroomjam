@@ -12051,7 +12051,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3727092286679522413, guid: 281d6bf79dc782d4786b6cbc4899cf62, type: 3}
       propertyPath: _waves.Array.data[1].WaveDelay
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4406851013604464242, guid: 281d6bf79dc782d4786b6cbc4899cf62, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12099,7 +12099,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4927313557035536438, guid: 281d6bf79dc782d4786b6cbc4899cf62, type: 3}
       propertyPath: StartingGold
-      value: 150
+      value: 290
       objectReference: {fileID: 0}
     - target: {fileID: 9095007147254991067, guid: 281d6bf79dc782d4786b6cbc4899cf62, type: 3}
       propertyPath: _hudCanvas
