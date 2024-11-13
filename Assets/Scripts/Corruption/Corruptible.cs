@@ -5,7 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public abstract class Corruptible : MonoBehaviour
 {
-    public Action<float> OnCorruptionValueChanged;
     public event Action OnCorruptionMaxReached;
 
     [SerializeField] private List<CorruptionState> _corruptionStates;
@@ -42,8 +41,6 @@ public abstract class Corruptible : MonoBehaviour
         
         if(_corruptionStateHandler != null)
             _corruptionStateHandler.CheckStatue(Corruption / MaxCorruption);
-        
-        OnCorruptionValueChanged?.Invoke(Corruption / MaxCorruption);
     }
     
     public void DeCorrupt(float decorruptionValue)
@@ -52,7 +49,5 @@ public abstract class Corruptible : MonoBehaviour
         
         if(_corruptionStateHandler != null)
             _corruptionStateHandler.CheckStatue(Corruption / MaxCorruption);
-        
-        OnCorruptionValueChanged?.Invoke(Corruption / MaxCorruption);
     }
 }

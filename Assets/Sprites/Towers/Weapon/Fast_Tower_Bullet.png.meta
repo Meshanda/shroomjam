@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 77fe64e55e9c88d40b9ec93ee4c58c43
+guid: 52db3a08d3356e048ae233e46ceae44d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7408791951343775973
-    second: Character_Idle_0
+      213: 261340766259333419
+    second: Fast_Tower_Bullet_0
   - first:
-      213: 1993866322318172352
-    second: Character_Idle_1
+      213: -2035080337459889109
+    second: Fast_Tower_Bullet_1
   - first:
-      213: 3116896773847871624
-    second: Character_Idle_2
+      213: -5640662559468381878
+    second: Fast_Tower_Bullet_2
   - first:
-      213: -2164072109898618113
-    second: Character_Idle_3
+      213: 1955387573657876055
+    second: Fast_Tower_Bullet_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,12 +55,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -122,79 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Character_Idle_0
+      name: Fast_Tower_Bullet_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 96
-        width: 19
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5e07e9ab60151d660800000000000000
-      internalID: 7408791951343775973
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Character_Idle_1
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 64
-        width: 19
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0c0a36f2bd2abab10800000000000000
-      internalID: 1993866322318172352
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Character_Idle_2
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 32
-        width: 20
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 88073ce0a11714b20800000000000000
-      internalID: 3116896773847871624
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Character_Idle_3
-      rect:
-        serializedVersion: 2
-        x: 7
+        x: 0
         y: 0
-        width: 20
-        height: 27
+        width: 9
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,8 +137,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ffaa92db1eba7f1e0800000000000000
-      internalID: -2164072109898618113
+      spriteID: b294732da0870a300800000000000000
+      internalID: 261340766259333419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fast_Tower_Bullet_1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 0
+        width: 8
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2c32542731f1c3e0800000000000000
+      internalID: -2035080337459889109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fast_Tower_Bullet_2
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 0
+        width: 6
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a499a05a94758b1b0800000000000000
+      internalID: -5640662559468381878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fast_Tower_Bullet_3
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 8
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 756371e53aee22b10800000000000000
+      internalID: 1955387573657876055
       vertices: []
       indices: 
       edges: []
@@ -213,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Character_Idle_0: 7408791951343775973
-      Character_Idle_1: 1993866322318172352
-      Character_Idle_2: 3116896773847871624
-      Character_Idle_3: -2164072109898618113
+      Fast_Tower_Bullet_0: 261340766259333419
+      Fast_Tower_Bullet_1: -2035080337459889109
+      Fast_Tower_Bullet_2: -5640662559468381878
+      Fast_Tower_Bullet_3: 1955387573657876055
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
