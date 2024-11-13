@@ -74,7 +74,6 @@ public class Enemy : Entity
     {
         if(_enemyAnimator)
         {
-            Debug.Log(_pathController.CurrentDirection);
             _enemyAnimator.SetFloat(XDir, _pathController.CurrentDirection.x);
             _enemyAnimator.SetFloat(YDir, _pathController.CurrentDirection.y);
         }

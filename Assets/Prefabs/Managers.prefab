@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moneySO: {fileID: 11400000, guid: a0dce25598c145141a49e5a856faf5b5, type: 2}
-  StartingGold: 0
+  StartingGold: 500
 --- !u!1 &5953871566979851073
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,8 +179,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawners:
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _waves:
-  - WaveData: {fileID: 11400000, guid: 3726f0b6441fa34418e9c22e40aebdc9, type: 2}
+  - WaveData: {fileID: 11400000, guid: 5dadd10a9e6e1674fb1c74f762f2e319, type: 2}
     WaveDelay: 1
   _manuallySpawnWaves: 0
 --- !u!1 &8479854870041840015

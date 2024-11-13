@@ -85,7 +85,6 @@ public class WaveManager : MonoBehaviour
     {
         if (_waves.Count <= 0)
         {
-            Debug.Log("No more waves");
             GameManager.OnGameWin?.Invoke();
             return;
         }
