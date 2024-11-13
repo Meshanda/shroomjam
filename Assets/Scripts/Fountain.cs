@@ -15,6 +15,7 @@ public class Fountain : MonoBehaviour
         
         _isPlayerInside = true;
         Character player = other.GetComponentInParent<Character>(); 
+        player.ActivateHealEffect();
         StartCoroutine(HealCorruptionCoroutine(player));
     }
 
@@ -22,6 +23,9 @@ public class Fountain : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Character player = other.GetComponentInParent<Character>(); 
+            player.DeactivateHealEffect();
+            
             _isPlayerInside = false;
         }
     }
