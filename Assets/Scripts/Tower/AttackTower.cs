@@ -47,7 +47,9 @@ public class AttackTower : Tower
 
         if (!_isAttacking)
         {
-            _weaponAnimator.SetBool("Shoot", true);
+            if(_weaponAnimator)
+                _weaponAnimator.SetBool("Shoot", true);
+            
             _isAttacking = true;
             StartCoroutine(AttackTarget());
         }
@@ -76,7 +78,8 @@ public class AttackTower : Tower
 
     private void ResetAggro()
     {
-        _weaponAnimator.SetBool("Shoot", false);
+        if(_weaponAnimator)
+            _weaponAnimator.SetBool("Shoot", false);
         
         _currentTarget = null;
         _isAttacking = false;

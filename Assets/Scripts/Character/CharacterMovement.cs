@@ -13,7 +13,7 @@ public class CharacterMovement : MonoBehaviour
     private int _reversed = 1;
     
     private Vector2 _movement;
-    private void Update()
+    private void FixedUpdate()
     {
         transform.Translate(_movement * (_speed * Time.deltaTime));
     }
