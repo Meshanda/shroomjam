@@ -9,6 +9,9 @@ using UnityEngine.Tilemaps;
 [RequireComponent(typeof(EnemyPathController))]
 public class Enemy : Entity
 {
+    private static readonly int XDir = Animator.StringToHash("xDir");
+    private static readonly int YDir = Animator.StringToHash("yDir");
+
     [Tooltip("Enemy walk speed")]
     [SerializeField] private float _speed;
     [Tooltip("Enemy health point")]
@@ -27,6 +30,8 @@ public class Enemy : Entity
     [Tooltip("How much the mob boost himself when stepping on a corrupted road")]
     [Range(1.0f, 20f)]
     [SerializeField] private float _boostPower = 1.2f;
+    
+    [SerializeField] private Animator _enemyAnimator;
     
     private EnemyPathController _pathController;
     
@@ -63,6 +68,16 @@ public class Enemy : Entity
     private void Start()
     {
         _pathController = GetComponent<EnemyPathController>();
+    }
+
+    private void FixedUpdate()
+    {
+        if(_enemyAnimator)
+        {
+            Debug.Log(_pathController.CurrentDirection);
+            _enemyAnimator.SetFloat(XDir, _pathController.CurrentDirection.x);
+            _enemyAnimator.SetFloat(YDir, _pathController.CurrentDirection.y);
+        }
     }
 
 

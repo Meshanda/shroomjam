@@ -5,7 +5,8 @@ public class EnemyPathController : MonoBehaviour
 {
 
     [SerializeField] private BezierWalkerWithSpeed _splineFollower;
-    
+
+    public Vector2 CurrentDirection => _splineFollower.Direction;
 
     private Enemy _enemyData;
     

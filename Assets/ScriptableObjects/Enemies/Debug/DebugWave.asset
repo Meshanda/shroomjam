@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac2078a08a947ae8fd4e74d549f6bbe, type: 3}
+  m_Name: DebugWave
+  m_EditorClassIdentifier: 
+  Elements:
+  - EnemyReference: {fileID: 11400000, guid: a16450feeed37d74ab70542678740867, type: 2}
+    SpawnerIndex: 0
+    Delay: 0
+  - EnemyReference: {fileID: 11400000, guid: a16450feeed37d74ab70542678740867, type: 2}
+    SpawnerIndex: 0
+    Delay: 0.5
+  - EnemyReference: {fileID: 11400000, guid: 30b196d48865a8242904a73f2f7ef411, type: 2}
+    SpawnerIndex: 0
+    Delay: 0
+  - EnemyReference: {fileID: 11400000, guid: fbe9cb8349293564eb4c6866e081dc21, type: 2}
+    SpawnerIndex: 0
+    Delay: 1
+  - EnemyReference: {fileID: 11400000, guid: 006bf4f004118af428ae5a8512fb5413, type: 2}
+    SpawnerIndex: 0
+    Delay: 2
+  - EnemyReference: {fileID: 11400000, guid: 006bf4f004118af428ae5a8512fb5413, type: 2}
+    SpawnerIndex: 0
+    Delay: 0
+  WaveReward: 0
+  IntendedSpawnerNumber: 1

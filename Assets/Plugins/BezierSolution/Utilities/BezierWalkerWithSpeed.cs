@@ -30,6 +30,8 @@ namespace BezierSolution
 			set { m_normalizedT = value; }
 		}
 
+		public Vector2 Direction;
+
 		//public float movementLerpModifier = 10f;
 		public float rotationLerpModifier = 10f;
 
@@ -48,7 +50,7 @@ namespace BezierSolution
 			_shift = Random.Range(-_shiftPower, _shiftPower);
 		}
 
-		private void Update()
+		private void FixedUpdate()
 		{
 			Execute( Time.deltaTime );
 		}
@@ -59,7 +61,11 @@ namespace BezierSolution
 
 			Vector3 targetPos = spline.MoveAlongSpline( ref m_normalizedT, targetSpeed * deltaTime );
 
+			Direction = new Vector3(targetPos.x + _shift, targetPos.y - _shift, 0) - transform.position;
+			Direction.Normalize();
+			
 			transform.position = new Vector2(targetPos.x + _shift, targetPos.y - _shift);
+			
 			//transform.position = Vector3.Lerp( transform.position, targetPos, movementLerpModifier * deltaTime );
 
 			bool movingForward = MovingForward;

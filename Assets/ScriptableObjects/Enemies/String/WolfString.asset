@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b382d03499664009a5f655bd75b400ad, type: 3}
-  m_Name: EnemyDatabase
+  m_Script: {fileID: 11500000, guid: a08b3a8c9a4e4e92bd838c6b3595a70d, type: 3}
+  m_Name: WolfString
   m_EditorClassIdentifier: 
-  Enemies:
-  - name: {fileID: 11400000, guid: dc85044615d2e5240bb6f38eca4dfcc9, type: 2}
-    prefab: {fileID: 3254297829206399260, guid: 133b268052350424ebb6b657e38c1f1b, type: 3}
+  value: Wolf
