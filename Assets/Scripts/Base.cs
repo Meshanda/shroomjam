@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -11,7 +12,14 @@ public class Base : Corruptible
     [SerializeField] private GameObject _noiseEffect;
     
     [SerializeField] private AudioMixer _gameMixer;
-    
+
+    private void OnEnable()
+    {
+        GameManager.OnGameOver += PitchLoose;
+        GameManager.OnGameWin += PitchWin;
+        
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Enemy"))
@@ -47,6 +55,16 @@ public class Base : Corruptible
     public void ChangeMixerPitch(float pitch)
     {
         _gameMixer.SetFloat("MusicPitch", pitch);
+    }
+
+    private void PitchLoose(Enums.GameOverType gameOverType)
+    {
+        ChangeMixerPitch(0.5f);
+    }
+
+    private void PitchWin()
+    {
+        ChangeMixerPitch(1.2f);
     }
 
 

@@ -21,6 +21,7 @@ public class CharacterMovement : MonoBehaviour
 
     public void ReverseInput(bool reverse)
     {
+        Debug.Log($"reverse = {reverse}");
         _reversed = reverse? -1 : 1;
     }
     

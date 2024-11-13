@@ -21,7 +21,7 @@ public abstract class Corruptible : MonoBehaviour
 
     public bool LastStateReached => _corruptionStateHandler.LastStateReached;
 
-    private void Start()
+    protected virtual void Start()
     {
         _corruptionStateHandler = new CorruptionStateHandler(_corruptionStates);
     }

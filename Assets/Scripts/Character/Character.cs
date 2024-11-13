@@ -22,11 +22,13 @@ public class Character : Corruptible
         GameManager.OnGameOver -= OnGameOver;
     }
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
+        
         UpdateCorruptionFeedback(0);
     }
-    
+
     public void ActivateHealEffect()
     {
         _healEffect.SetActive(true);
