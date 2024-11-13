@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b89280e6f0929ab4a8389f98c63c2aee, type: 3}
   m_Name: FountainTile
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -6056038591643079516, guid: 992284f6abd14474397242a7590f9954, type: 3}
+  m_Sprite: {fileID: 5112343800718892531, guid: 452690d846fe11747b192c598f762f87, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
