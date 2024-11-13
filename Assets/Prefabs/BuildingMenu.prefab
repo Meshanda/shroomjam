@@ -537,7 +537,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 1
   _header: Fast Tower
-  _content: This is a tower. It does something. To be Explained
+  _content: 'Attack enemies around it.
+
+    When corrupted, attack towers and player.
+
+
+    Cost:
+    150
+
+    Damage: Low
+
+    Range: Medium
+
+    AtkSpeed: High
+
+    CorruptionRate:
+    Medium '
   _delay: 0.1
 --- !u!58 &9172905041399918562
 CircleCollider2D:
@@ -1112,7 +1127,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 1
   _header: Sniper Tower
-  _content: This is a tower. It does something. To be Explained
+  _content: 'Attack enemies around it.
+
+    When corrupted, attack towers and player.
+
+
+    Cost:
+    200
+
+    Damage: High
+
+    Range: High
+
+    AtkSpeed: Low
+
+    CorruptionRate:
+    High'
   _delay: 0.1
 --- !u!58 &663895340502607807
 CircleCollider2D:
@@ -1276,7 +1306,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 1
   _header: Basic Tower
-  _content: This is a tower. It does something. To be Explained
+  _content: 'Attack enemies around it.
+
+    When corrupted, attack towers and player.
+
+
+    Cost:
+    100
+
+    Damage: Medium
+
+    Range: Medium
+
+    AtkSpeed: Low
+
+    CorruptionRate:
+    Low'
   _delay: 0.1
 --- !u!58 &1395318694817845906
 CircleCollider2D:
@@ -2377,7 +2422,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 1
   _header: Support Tower
-  _content: This is a tower. It does something. To be Explained
+  _content: 'Heal towers around it.
+
+    When corrupted, corrupt towers.
+
+
+    Cost:
+    300
+
+    Heal: Low
+
+    Range: Medium
+
+    HealSpeed: Medium
+
+    CorruptionRate:
+    Medium '
   _delay: 0.1
 --- !u!58 &7549147422279245904
 CircleCollider2D:

@@ -205,6 +205,21 @@ PrefabInstance:
       propertyPath: _powerDataSo
       value: 
       objectReference: {fileID: 11400000, guid: f381ca3abba437b4aaae346854df5e2a, type: 2}
+    - target: {fileID: 7829541451327076478, guid: 1d55b9ddd958f1b4d91e4ac5305410cb, type: 3}
+      propertyPath: _header
+      value: Boost Spell
+      objectReference: {fileID: 0}
+    - target: {fileID: 7829541451327076478, guid: 1d55b9ddd958f1b4d91e4ac5305410cb, type: 3}
+      propertyPath: _content
+      value: 'Increase towers attack speed.
+
+
+
+        Value: 60%
+
+        Cooldown:
+        7s'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -366,6 +381,21 @@ PrefabInstance:
       propertyPath: _powerDataSo
       value: 
       objectReference: {fileID: 11400000, guid: 691979cdb52d8d049a19da4b04851936, type: 2}
+    - target: {fileID: 7829541451327076478, guid: 1d55b9ddd958f1b4d91e4ac5305410cb, type: 3}
+      propertyPath: _header
+      value: Shield Spell
+      objectReference: {fileID: 0}
+    - target: {fileID: 7829541451327076478, guid: 1d55b9ddd958f1b4d91e4ac5305410cb, type: 3}
+      propertyPath: _content
+      value: 'Towers will corrupt slower.
+
+
+
+        Value: 40%
+
+        Cooldown:
+        6s'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -524,6 +554,20 @@ PrefabInstance:
       propertyPath: _powerDataSo
       value: 
       objectReference: {fileID: 11400000, guid: adcabdeabe64b024787469a65940df26, type: 2}
+    - target: {fileID: 7829541451327076478, guid: 1d55b9ddd958f1b4d91e4ac5305410cb, type: 3}
+      propertyPath: _header
+      value: Healing Spell
+      objectReference: {fileID: 0}
+    - target: {fileID: 7829541451327076478, guid: 1d55b9ddd958f1b4d91e4ac5305410cb, type: 3}
+      propertyPath: _content
+      value: 'Heal towers over time.
+
+
+
+        Duration: 3s
+
+        Cooldown: 9s'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

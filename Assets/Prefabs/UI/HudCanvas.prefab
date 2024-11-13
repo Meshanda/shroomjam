@@ -169,10 +169,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ActionBar
       objectReference: {fileID: 0}
-    - target: {fileID: 2079746990677718049, guid: dca3c6fb9b0f27d47b48b1ff7eaa8cae, type: 3}
-      propertyPath: _content
-      value: Heal towers and roads from the corruption
-      objectReference: {fileID: 0}
     - target: {fileID: 2892842320912334430, guid: dca3c6fb9b0f27d47b48b1ff7eaa8cae, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -220,14 +216,6 @@ PrefabInstance:
     - target: {fileID: 3667304114744797312, guid: dca3c6fb9b0f27d47b48b1ff7eaa8cae, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -37
-      objectReference: {fileID: 0}
-    - target: {fileID: 4846609529473264495, guid: dca3c6fb9b0f27d47b48b1ff7eaa8cae, type: 3}
-      propertyPath: _header
-      value: Boost Spell
-      objectReference: {fileID: 0}
-    - target: {fileID: 4846609529473264495, guid: dca3c6fb9b0f27d47b48b1ff7eaa8cae, type: 3}
-      propertyPath: _content
-      value: Boost you towers during a short time
       objectReference: {fileID: 0}
     - target: {fileID: 6247139337032371481, guid: dca3c6fb9b0f27d47b48b1ff7eaa8cae, type: 3}
       propertyPath: m_Pivot.x
@@ -320,14 +308,6 @@ PrefabInstance:
     - target: {fileID: 6247139337032371481, guid: dca3c6fb9b0f27d47b48b1ff7eaa8cae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6450013223290011057, guid: dca3c6fb9b0f27d47b48b1ff7eaa8cae, type: 3}
-      propertyPath: _header
-      value: Shield Spell
-      objectReference: {fileID: 0}
-    - target: {fileID: 6450013223290011057, guid: dca3c6fb9b0f27d47b48b1ff7eaa8cae, type: 3}
-      propertyPath: _content
-      value: Protect your towers from the corruption during a short time
       objectReference: {fileID: 0}
     - target: {fileID: 7888831860233451470, guid: dca3c6fb9b0f27d47b48b1ff7eaa8cae, type: 3}
       propertyPath: m_AnchorMax.y
