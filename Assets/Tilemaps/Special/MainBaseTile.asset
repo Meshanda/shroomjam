@@ -34,4 +34,3 @@ MonoBehaviour:
   m_InstancedGameObject: {fileID: 5575223175206741922, guid: 7245f532b30bdc94ea09d9b1c68559e3, type: 3}
   m_Flags: 1
   m_ColliderType: 1
-  _maxCorruption: 10

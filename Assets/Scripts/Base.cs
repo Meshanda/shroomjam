@@ -1,7 +1,13 @@
+using System.Collections;
 using UnityEngine;
 
 public class Base : Corruptible
 {
+
+    [SerializeField] private float _noiseDuration;
+    
+    [SerializeField] private GameObject _noiseEffect;
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Enemy"))
@@ -25,5 +31,20 @@ public class Base : Corruptible
                 GameManager.OnGameOver?.Invoke(Enums.GameOverType.BaseDestroyed);
             }
         }
+    }
+
+    public void ActivateTvNoise()
+    {
+        _noiseEffect.SetActive(true);
+
+        StartCoroutine(StopNoise());
+    }
+
+
+    private IEnumerator StopNoise()
+    {
+        yield return new WaitForSeconds(_noiseDuration);
+        
+        _noiseEffect.SetActive(false);
     }
 }
