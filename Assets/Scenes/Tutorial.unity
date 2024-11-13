@@ -12047,11 +12047,11 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 2f9458bc3d4582144ab29fa596964c2b, type: 2}
     - target: {fileID: 3727092286679522413, guid: 281d6bf79dc782d4786b6cbc4899cf62, type: 3}
       propertyPath: _waves.Array.data[0].WaveDelay
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3727092286679522413, guid: 281d6bf79dc782d4786b6cbc4899cf62, type: 3}
       propertyPath: _waves.Array.data[1].WaveDelay
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4406851013604464242, guid: 281d6bf79dc782d4786b6cbc4899cf62, type: 3}
       propertyPath: m_LocalPosition.x
