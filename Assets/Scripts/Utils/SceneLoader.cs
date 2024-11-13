@@ -3,7 +3,7 @@
 public static class SceneLoader 
 {
     private const string TUTORIAL_SCENE = "Tutorial";
-    private const string LEVEL_ONE_SCENE = "Game";
+    private const string LEVEL_ONE_SCENE = "Level1";
     private const string MAIN_MENU_SCENE = "MainMenu";
     
     public static void LoadMainMenu()
