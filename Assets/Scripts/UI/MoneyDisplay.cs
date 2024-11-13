@@ -23,6 +23,6 @@ public class MoneyDisplay : MonoBehaviour
 
     private void UpdateMoneyDisplay(int newValue)
     {
-        _moneyText.text = "Gold: " + newValue;
+        _moneyText.text = "" + newValue;
     }
 }
