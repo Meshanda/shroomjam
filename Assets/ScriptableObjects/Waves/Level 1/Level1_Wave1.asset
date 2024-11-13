@@ -37,5 +37,5 @@ MonoBehaviour:
     EnemyNumber: 5
     SpawnerIndex: 1
     Delay: 0
-  WaveReward: 5
+  WaveReward: 30
   IntendedSpawnerNumber: 3

@@ -117,7 +117,7 @@ MonoBehaviour:
   _speed: 3
   _health: 35
   _corruptionRate: 4
-  _corruptionSpeed: 0.5
+  _corruptionSpeed: 1
   _earnedPoints: 30
   _boostPower: 1.3
   _enemyAnimator: {fileID: 5374167676245196913}

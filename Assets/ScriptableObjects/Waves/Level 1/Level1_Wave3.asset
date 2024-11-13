@@ -12,6 +12,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ac2078a08a947ae8fd4e74d549f6bbe, type: 3}
   m_Name: Level1_Wave3
   m_EditorClassIdentifier: 
-  Elements: []
-  WaveReward: 50
+  Elements:
+  - EnemyReference: {fileID: 11400000, guid: fbe9cb8349293564eb4c6866e081dc21, type: 2}
+    EnemyNumber: 3
+    SpawnerIndex: 1
+    Delay: 0
+  - EnemyReference: {fileID: 11400000, guid: 006bf4f004118af428ae5a8512fb5413, type: 2}
+    EnemyNumber: 2
+    SpawnerIndex: 1
+    Delay: 0
+  - EnemyReference: {fileID: 11400000, guid: 30b196d48865a8242904a73f2f7ef411, type: 2}
+    EnemyNumber: 4
+    SpawnerIndex: 0
+    Delay: 0
+  - EnemyReference: {fileID: 11400000, guid: 006bf4f004118af428ae5a8512fb5413, type: 2}
+    EnemyNumber: 3
+    SpawnerIndex: 1
+    Delay: 3
+  - EnemyReference: {fileID: 11400000, guid: fbe9cb8349293564eb4c6866e081dc21, type: 2}
+    EnemyNumber: 2
+    SpawnerIndex: 1
+    Delay: 0
+  - EnemyReference: {fileID: 11400000, guid: 006bf4f004118af428ae5a8512fb5413, type: 2}
+    EnemyNumber: 2
+    SpawnerIndex: 0
+    Delay: 0
+  - EnemyReference: {fileID: 11400000, guid: fbe9cb8349293564eb4c6866e081dc21, type: 2}
+    EnemyNumber: 2
+    SpawnerIndex: 0
+    Delay: 0
+  - EnemyReference: {fileID: 11400000, guid: a16450feeed37d74ab70542678740867, type: 2}
+    EnemyNumber: 2
+    SpawnerIndex: 1
+    Delay: 2
+  - EnemyReference: {fileID: 11400000, guid: 30b196d48865a8242904a73f2f7ef411, type: 2}
+    EnemyNumber: 5
+    SpawnerIndex: 1
+    Delay: 2
+  - EnemyReference: {fileID: 11400000, guid: 30b196d48865a8242904a73f2f7ef411, type: 2}
+    EnemyNumber: 5
+    SpawnerIndex: 0
+    Delay: 0
+  - EnemyReference: {fileID: 11400000, guid: a16450feeed37d74ab70542678740867, type: 2}
+    EnemyNumber: 3
+    SpawnerIndex: 1
+    Delay: 2
+  - EnemyReference: {fileID: 11400000, guid: a16450feeed37d74ab70542678740867, type: 2}
+    EnemyNumber: 2
+    SpawnerIndex: 0
+    Delay: 0
+  WaveReward: 60
   IntendedSpawnerNumber: 3

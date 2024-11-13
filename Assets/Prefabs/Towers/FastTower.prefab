@@ -197,8 +197,8 @@ MonoBehaviour:
   _corruptionRate: 1
   _maxCorruption: 100
   _corruptionRenderer: {fileID: 7056072174911316466}
-  _damage: 3
-  _corruptionDamage: 3
+  _damage: 5
+  _corruptionDamage: 5
   _attackSpeed: 2
   _range: 3
   _cost: 70
