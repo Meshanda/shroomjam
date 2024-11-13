@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8148550979359346596
 Transform:
   m_ObjectHideFlags: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: 2687480260975243855, guid: b45254489fad2794b9d81a96d352e7f7, type: 3}
-  m_Color: {r: 1, g: 0.37961707, b: 0, a: 0.5372549}
+  m_Color: {r: 0.037246335, g: 0.58623046, b: 0.8773585, a: 0.29803923}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -411,7 +411,7 @@ Transform:
   m_GameObject: {fileID: 410793685372860621}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -20}
+  m_LocalPosition: {x: 0, y: 40.1, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1021,7 +1021,7 @@ MonoBehaviour:
   _powerEffect: {fileID: 0}
   _powerVisualizerHover: {fileID: 328575038462079015}
   _showDelay: 0.1
-  _fadeValue: 0.6
+  _fadeValue: 0.3
   _fadeDelay: 0.1
   _cleanPower: {fileID: 7385574449208644436}
   _shieldPower: {fileID: 6705193654112212659}
