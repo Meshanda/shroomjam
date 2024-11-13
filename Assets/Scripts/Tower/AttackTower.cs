@@ -1,19 +1,31 @@
 ﻿using System;
 using System.Collections;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class AttackTower : Tower
 {
+    private static readonly int ShootSpeed = Animator.StringToHash("ShootSpeed");
+    
     private bool _isAttacking;
     private Transform _currentTarget;
     private Corruptible _corruptibleTarget;
     
+    [FormerlySerializedAs("_weaponRenderer")] [SerializeField] Transform _weaponTransform;
+
+    [SerializeField] private Animator _weaponAnimator;
+    
+    [SerializeField] private Transform _bulletPosition;
+
     protected override void Awake()
     {
         base.Awake();
         
         _isAttacking = false;
         _isCorrupted = false;
+        
+        _weaponAnimator.SetFloat(ShootSpeed, AttackSpeed);
     }
 
     private void Update()
@@ -23,9 +35,18 @@ public class AttackTower : Tower
             ResetAggro();
             return;
         }
+        
+        if(_weaponTransform)
+        {
+            var dir = _currentTarget.transform.position - _weaponTransform.position;
+            var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            _weaponTransform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
+        
 
         if (!_isAttacking)
         {
+            _weaponAnimator.SetBool("Shoot", true);
             _isAttacking = true;
             StartCoroutine(AttackTarget());
         }
@@ -48,18 +69,22 @@ public class AttackTower : Tower
             return;
         }
         
-        var bullet = Instantiate(_bulletPfb, transform.position, Quaternion.identity).GetComponent<Bullet>();
-        bullet.Init(_currentTarget.transform, Damage, CorruptionDamage, _core);
+        var bullet = Instantiate(_bulletPfb, _bulletPosition.position, _weaponTransform.rotation).GetComponent<Bullet>();
+        bullet.Init(_currentTarget.transform, Damage, CorruptionDamage, _core, _isCorrupted);
     }
 
     private void ResetAggro()
     {
+        _weaponAnimator.SetBool("Shoot", false);
+        
         _currentTarget = null;
         _isAttacking = false;
         
         if (_corruptibleTarget == null) return;
         _corruptibleTarget.OnCorruptionMaxReached -= ResetAggro;
         _corruptibleTarget = null;
+        
+        
     }
     
     private void SetTarget(Transform target)

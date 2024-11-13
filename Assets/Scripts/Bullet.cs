@@ -13,6 +13,8 @@ public class Bullet : MonoBehaviour
     private CircleCollider2D _collider;
 
     private GameObject _owner;
+    
+    private bool _corrupted = false;
 
     private void Awake()
     {
@@ -25,12 +27,13 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject, 5f);
     }
 
-    public void Init(Transform target, float damage, float corruption, GameObject owner)
+    public void Init(Transform target, float damage, float corruption, GameObject owner, bool corrupted)
     {
         _target = target;
         _damage = damage;
         _corruption = corruption;
         _owner = owner;
+        _corrupted = corrupted;
     }
     
     private void Update()
@@ -44,18 +47,26 @@ public class Bullet : MonoBehaviour
         Vector3 dir = _target.position - transform.position;
         float distanceThisFrame = _speed * Time.deltaTime;
         
+        var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
     }
     
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.CompareTag("Road"))
+        {
+            return;
+        }
+        
         if (other.CompareTag("Enemy"))
         {
             other.GetComponentInParent<Enemy>().TakeDamage(_damage);
             Destroy(gameObject);
         }
         
-        if (other.gameObject.layer.Equals(LayerMask.NameToLayer("Corruptible")) && other.gameObject != _owner)
+        if (_corrupted && other.gameObject.layer.Equals(LayerMask.NameToLayer("Corruptible")) && other.gameObject != _owner)
         {
             var corruptibleCollided = other.GetComponentInParent<Corruptible>();
             if (corruptibleCollided.Corruption >= corruptibleCollided.MaxCorruption) return;
