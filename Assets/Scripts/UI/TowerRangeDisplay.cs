@@ -8,14 +8,10 @@ public class TowerRangeDisplay : MonoBehaviour, IPointerEnterHandler, IPointerEx
     [SerializeField] private SpriteRenderer _rangeRenderer;
     [SerializeField] private float _fadeValue;
     
-    private Tower _tower;
     private Coroutine _coroutine;
     
     private void Awake()
     {
-        _tower = GetComponentInParent<Tower>();
-        _rangeRenderer.transform.localScale = new Vector3(_tower.Range, _tower.Range, 1);
-        
         _coroutine = null;
         
         DisplayRange(false, 0);
@@ -40,14 +36,15 @@ public class TowerRangeDisplay : MonoBehaviour, IPointerEnterHandler, IPointerEx
             }));
 
         if (b) return;
-        var color = _rangeRenderer.color;
-        color.a = 0;
-        _rangeRenderer.color = color;
-
+        
         if (_coroutine != null)
         {
             StopCoroutine(_coroutine);
             _coroutine = null;
         }
+        
+        var color = _rangeRenderer.color;
+        color.a = 0;
+        _rangeRenderer.color = color;
     }
 }

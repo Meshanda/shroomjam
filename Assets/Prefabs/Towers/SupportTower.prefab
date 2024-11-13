@@ -130,7 +130,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 3
 --- !u!50 &469316605174868575
 Rigidbody2D:
   serializedVersion: 5
@@ -372,6 +372,22 @@ PrefabInstance:
     - target: {fileID: 2411006192598217482, guid: f2f970bd5b6c5064c92e395512a328a5, type: 3}
       propertyPath: m_Name
       value: RangeTower
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920557369030829087, guid: f2f970bd5b6c5064c92e395512a328a5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920557369030829087, guid: f2f970bd5b6c5064c92e395512a328a5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920557369030829087, guid: f2f970bd5b6c5064c92e395512a328a5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920557369030829087, guid: f2f970bd5b6c5064c92e395512a328a5, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7614909113303708946, guid: f2f970bd5b6c5064c92e395512a328a5, type: 3}
       propertyPath: m_LocalPosition.x
