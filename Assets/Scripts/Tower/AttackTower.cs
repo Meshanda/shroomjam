@@ -25,7 +25,8 @@ public class AttackTower : Tower
         _isAttacking = false;
         _isCorrupted = false;
         
-        _weaponAnimator.SetFloat(ShootSpeed, AttackSpeed);
+        if(_weaponAnimator)
+            _weaponAnimator.SetFloat(ShootSpeed, AttackSpeed);
     }
 
     private void Update()
@@ -69,7 +70,7 @@ public class AttackTower : Tower
             return;
         }
         
-        var bullet = Instantiate(_bulletPfb, _bulletPosition.position, _weaponTransform.rotation).GetComponent<Bullet>();
+        var bullet = Instantiate(_bulletPfb, _bulletPosition.position, _weaponTransform? _weaponTransform.rotation : Quaternion.identity).GetComponent<Bullet>();
         bullet.Init(_currentTarget.transform, Damage, CorruptionDamage, _core, _isCorrupted);
     }
 
