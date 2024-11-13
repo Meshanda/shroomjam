@@ -5,7 +5,9 @@ using UnityEngine;
 public abstract class Tower : Corruptible
 {
     public Enums.TowerType Type { get; protected set; }
-    
+
+    [Header("Corruption Feedback")]
+    [SerializeField] private SpriteRenderer _corruptionRenderer;
 
     [Header("Tower Stats")]
     [SerializeField] private float _damage;
@@ -42,6 +44,8 @@ public abstract class Tower : Corruptible
         
         _defaultCorruptionRate = CorruptionRate;
         _defaultAttackSpeed = AttackSpeed;
+        
+        UpdateCorruptionFeedback(0);
     }
 
     public void SetHealStatusBuff(bool value)
@@ -73,5 +77,11 @@ public abstract class Tower : Corruptible
         AttackSpeed = _defaultAttackSpeed;
     }
 
+    protected override void UpdateCorruptionFeedback(float a)
+    {
+        var color = _corruptionRenderer.color;
+        color.a = a;
+        _corruptionRenderer.color = color;
+    }
 
 }

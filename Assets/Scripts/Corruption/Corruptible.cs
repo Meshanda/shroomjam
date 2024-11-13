@@ -43,13 +43,23 @@ public abstract class Corruptible : MonoBehaviour
         
         if(_corruptionStateHandler != null)
             _corruptionStateHandler.CheckStatue(Corruption / MaxCorruption);
+
+        UpdateCorruptionFeedback(Corruption / MaxCorruption);
     }
+
     
+
     public void DeCorrupt(float decorruptionValue)
     {
         Corruption -= decorruptionValue * CorruptionRate;
         
         if(_corruptionStateHandler != null)
             _corruptionStateHandler.CheckStatue(Corruption / MaxCorruption);
+        
+        UpdateCorruptionFeedback(Corruption / MaxCorruption);
+    }
+    
+    protected virtual void UpdateCorruptionFeedback(float a)
+    {
     }
 }

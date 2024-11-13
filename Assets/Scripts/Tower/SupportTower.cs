@@ -50,7 +50,7 @@ public class SupportTower : Tower
         var corruptible = other.GetComponentInParent<Corruptible>();
         if (corruptible == null) return; // If the other object is not corruptible
         
-        if (!_targetList.Contains(corruptible)) return; // If the other object is not in the target list
+        if (_targetList.Contains(corruptible)) return; // If the other object is in the target list
 
         _targetList.Add(corruptible);
     }
