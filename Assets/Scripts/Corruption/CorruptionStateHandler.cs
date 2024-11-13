@@ -31,7 +31,7 @@ public class CorruptionStateHandler
         }
         
         _currentState = ConstructNextHandler(states,  null);
-        
+        _currentState.State.InvokeAction();
     }
 
     private CorruptionStateList ConstructNextHandler(List<CorruptionState> states, CorruptionStateList currentState)

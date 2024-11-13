@@ -1,12 +1,16 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Base : Corruptible
 {
 
     [Header("Noise Effect")]
     [SerializeField] private float _noiseDuration;
+    
     [SerializeField] private GameObject _noiseEffect;
+    
+    [SerializeField] private AudioMixer _gameMixer;
     
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -38,6 +42,11 @@ public class Base : Corruptible
         _noiseEffect.SetActive(true);
 
         StartCoroutine(StopNoise());
+    }
+
+    public void ChangeMixerPitch(float pitch)
+    {
+        _gameMixer.SetFloat("MusicPitch", pitch);
     }
 
 
