@@ -10449,6 +10449,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.043387324
       objectReference: {fileID: 0}
+    - target: {fileID: 2409920385780708654, guid: 3d096c04ce0bef241a7124e97ad29bd9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3735949478389697797, guid: 3d096c04ce0bef241a7124e97ad29bd9, type: 3}
       propertyPath: _fadeValue
       value: 0.3
@@ -11454,6 +11458,37 @@ MonoBehaviour:
     c2: 0
     c3: 0
     c4: 0
+--- !u!1 &954850973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 954850974}
+  m_Layer: 0
+  m_Name: --------
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &954850974
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954850973}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &994376033
 GameObject:
   m_ObjectHideFlags: 0
@@ -15342,7 +15377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5593127787774645742, guid: faacdefe04b0c6b4e8a49aa9f59da7ba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 55
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5593127787774645742, guid: faacdefe04b0c6b4e8a49aa9f59da7ba, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -15366,7 +15401,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5863199294019262187, guid: faacdefe04b0c6b4e8a49aa9f59da7ba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -55
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5863199294019262187, guid: faacdefe04b0c6b4e8a49aa9f59da7ba, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -15749,6 +15784,7 @@ SceneRoots:
   - {fileID: 371944610}
   - {fileID: 1156206845}
   - {fileID: 164280764}
+  - {fileID: 954850974}
   - {fileID: 1790511415}
   - {fileID: 679706336}
   - {fileID: 1386915868}
