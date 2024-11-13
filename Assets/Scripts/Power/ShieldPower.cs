@@ -14,6 +14,7 @@ public class ShieldPower : Power
         {
             _colliders = CheckOverlapCircle(_dataSo.Range, "Tower");
             _towers = GetGenericTypeList<Tower>();
+            _powerEffect.ShieldAreaEffect(transform.position);
         
             foreach (Tower tower in _towers)
             {

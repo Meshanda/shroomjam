@@ -14,6 +14,7 @@ public class AttackSpeedPower : Power
         {
             _colliders = CheckOverlapCircle(_dataSo.Range, "Tower");
             _towers = GetGenericTypeList<Tower>();
+            _powerEffect.AttackSpeedAreaEffect(transform.position);
 
             foreach (Tower tower in _towers)
             {

@@ -816,7 +816,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76eb9121098341f5b17ded0e9fc05ebb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _powerVisualizer: {fileID: 328575038462079015}
+  _powerEffect: {fileID: 0}
+  _powerVisualizerHover: {fileID: 328575038462079015}
   _showDelay: 0.1
   _fadeValue: 0.6
   _fadeDelay: 0.1
