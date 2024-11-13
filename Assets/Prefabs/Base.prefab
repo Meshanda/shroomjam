@@ -166,6 +166,90 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: c2027bd6a58f366429c1de24cc8a5950, type: 2}
+          m_TargetAssemblyTypeName: UnityEngine.Tilemaps.Tile, UnityEngine
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 6257509294845563949, guid: 1dcbf5ae00af658478c3965b37580947, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: f457900f76c326e478e7e4f72f6e8183, type: 2}
+          m_TargetAssemblyTypeName: UnityEngine.Tilemaps.Tile, UnityEngine
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 6130030234127702308, guid: 30a99580b174d2c4c96d82523f4ab50c, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: 777e26bc2c82eac47bd7d53a308955bc, type: 2}
+          m_TargetAssemblyTypeName: UnityEngine.Tilemaps.Tile, UnityEngine
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: -1770462644327708756, guid: b0a4cdfef56dda24fb88837c96110f23, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: 2bedf750747b46348ad240f07140c306, type: 2}
+          m_TargetAssemblyTypeName: UnityEngine.Tilemaps.Tile, UnityEngine
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 9107031617004316153, guid: 97226d24c6d643444ac4444aa54147ed, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: d5242cb4403a76446ac12f432e7af625, type: 2}
+          m_TargetAssemblyTypeName: UnityEngine.Tilemaps.Tile, UnityEngine
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 6853316077166303748, guid: 8fa455ec4eb376340b8516dc55fea816, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: 6ab68d69614ced1489fd53f75454b2af, type: 2}
+          m_TargetAssemblyTypeName: UnityEngine.Tilemaps.Tile, UnityEngine
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: -1959309448724035899, guid: 5bdd832db3d6bd4419f9e9ba671d69f6, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 418380115565243420}
+          m_TargetAssemblyTypeName: Base, Assembly-CSharp
+          m_MethodName: RefreshSpecialTileMap
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     CorruptionPercentage: 0
   - OnCorruptionStateEnter:
       m_PersistentCalls:
@@ -198,6 +282,90 @@ MonoBehaviour:
           m_TargetAssemblyTypeName: Base, Assembly-CSharp
           m_MethodName: ChangeMixerPitch
           m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.9
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: c2027bd6a58f366429c1de24cc8a5950, type: 2}
+          m_TargetAssemblyTypeName: UnityEngine.Tilemaps.Tile, UnityEngine
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4289435539104862494, guid: 1dcbf5ae00af658478c3965b37580947, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.9
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: f457900f76c326e478e7e4f72f6e8183, type: 2}
+          m_TargetAssemblyTypeName: UnityEngine.Tilemaps.Tile, UnityEngine
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2261196790629488342, guid: 30a99580b174d2c4c96d82523f4ab50c, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.9
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: 777e26bc2c82eac47bd7d53a308955bc, type: 2}
+          m_TargetAssemblyTypeName: UnityEngine.Tilemaps.Tile, UnityEngine
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1801258333335225993, guid: b0a4cdfef56dda24fb88837c96110f23, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.9
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: 2bedf750747b46348ad240f07140c306, type: 2}
+          m_TargetAssemblyTypeName: UnityEngine.Tilemaps.Tile, UnityEngine
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 3035785070027589630, guid: 97226d24c6d643444ac4444aa54147ed, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.9
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: d5242cb4403a76446ac12f432e7af625, type: 2}
+          m_TargetAssemblyTypeName: UnityEngine.Tilemaps.Tile, UnityEngine
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4134985361545656292, guid: 8fa455ec4eb376340b8516dc55fea816, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.9
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: 6ab68d69614ced1489fd53f75454b2af, type: 2}
+          m_TargetAssemblyTypeName: UnityEngine.Tilemaps.Tile, UnityEngine
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8833859764723060037, guid: 5bdd832db3d6bd4419f9e9ba671d69f6, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.9
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 418380115565243420}
+          m_TargetAssemblyTypeName: Base, Assembly-CSharp
+          m_MethodName: RefreshSpecialTileMap
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -246,6 +414,90 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: c2027bd6a58f366429c1de24cc8a5950, type: 2}
+          m_TargetAssemblyTypeName: UnityEngine.Tilemaps.Tile, UnityEngine
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4189116650146490747, guid: 1dcbf5ae00af658478c3965b37580947, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.7
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: f457900f76c326e478e7e4f72f6e8183, type: 2}
+          m_TargetAssemblyTypeName: UnityEngine.Tilemaps.Tile, UnityEngine
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8629662474899390597, guid: 30a99580b174d2c4c96d82523f4ab50c, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.7
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: 777e26bc2c82eac47bd7d53a308955bc, type: 2}
+          m_TargetAssemblyTypeName: UnityEngine.Tilemaps.Tile, UnityEngine
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 3655279423540436774, guid: b0a4cdfef56dda24fb88837c96110f23, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.7
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: 2bedf750747b46348ad240f07140c306, type: 2}
+          m_TargetAssemblyTypeName: UnityEngine.Tilemaps.Tile, UnityEngine
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: -9115557857807940002, guid: 97226d24c6d643444ac4444aa54147ed, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.7
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: d5242cb4403a76446ac12f432e7af625, type: 2}
+          m_TargetAssemblyTypeName: UnityEngine.Tilemaps.Tile, UnityEngine
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: -1566730818833404899, guid: 8fa455ec4eb376340b8516dc55fea816, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.7
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: 6ab68d69614ced1489fd53f75454b2af, type: 2}
+          m_TargetAssemblyTypeName: UnityEngine.Tilemaps.Tile, UnityEngine
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2782104450969631285, guid: 5bdd832db3d6bd4419f9e9ba671d69f6, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.7
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 418380115565243420}
+          m_TargetAssemblyTypeName: Base, Assembly-CSharp
+          m_MethodName: RefreshSpecialTileMap
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.7
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     CorruptionPercentage: 0.5
   - OnCorruptionStateEnter:
       m_PersistentCalls:
@@ -278,6 +530,90 @@ MonoBehaviour:
           m_TargetAssemblyTypeName: Base, Assembly-CSharp
           m_MethodName: ChangeMixerPitch
           m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.7
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: c2027bd6a58f366429c1de24cc8a5950, type: 2}
+          m_TargetAssemblyTypeName: UnityEngine.Tilemaps.Tile, UnityEngine
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 6262000130312829598, guid: 1dcbf5ae00af658478c3965b37580947, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.7
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: f457900f76c326e478e7e4f72f6e8183, type: 2}
+          m_TargetAssemblyTypeName: UnityEngine.Tilemaps.Tile, UnityEngine
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: -140133919579820678, guid: 30a99580b174d2c4c96d82523f4ab50c, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.7
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: 777e26bc2c82eac47bd7d53a308955bc, type: 2}
+          m_TargetAssemblyTypeName: UnityEngine.Tilemaps.Tile, UnityEngine
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: -1304234389418423848, guid: b0a4cdfef56dda24fb88837c96110f23, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.7
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: 2bedf750747b46348ad240f07140c306, type: 2}
+          m_TargetAssemblyTypeName: UnityEngine.Tilemaps.Tile, UnityEngine
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 7548092919496316922, guid: 97226d24c6d643444ac4444aa54147ed, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.7
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: d5242cb4403a76446ac12f432e7af625, type: 2}
+          m_TargetAssemblyTypeName: UnityEngine.Tilemaps.Tile, UnityEngine
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: -7301469273254094464, guid: 8fa455ec4eb376340b8516dc55fea816, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.7
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: 6ab68d69614ced1489fd53f75454b2af, type: 2}
+          m_TargetAssemblyTypeName: UnityEngine.Tilemaps.Tile, UnityEngine
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: -3921981781641609069, guid: 5bdd832db3d6bd4419f9e9ba671d69f6, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.7
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 418380115565243420}
+          m_TargetAssemblyTypeName: Base, Assembly-CSharp
+          m_MethodName: RefreshSpecialTileMap
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

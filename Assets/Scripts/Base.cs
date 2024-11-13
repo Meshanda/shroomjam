@@ -57,6 +57,11 @@ public class Base : Corruptible
         _gameMixer.SetFloat("MusicPitch", pitch);
     }
 
+    public void RefreshSpecialTileMap()
+    {
+        TileManager.Instance.SpecialTilemap.RefreshAllTiles();
+    }
+
     private void PitchLoose(Enums.GameOverType gameOverType)
     {
         ChangeMixerPitch(0.5f);
