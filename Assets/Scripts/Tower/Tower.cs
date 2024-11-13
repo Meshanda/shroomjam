@@ -9,6 +9,8 @@ public abstract class Tower : Corruptible
     [SerializeField] protected GameObject _core;
     
     public Enums.TowerType Type { get; protected set; }
+    
+    [SerializeField] private TowerBuff _towerBuff;
 
     [Header("Tower Stats")]
     [SerializeField] private float _damage;
@@ -42,23 +44,32 @@ public abstract class Tower : Corruptible
         _defaultAttackSpeed = AttackSpeed;
     }
 
+    public void SetHealStatusBuff(bool value)
+    {
+        _towerBuff.Heal(value);
+    }
+
     public void AddShieldToTower(float shieldRate)
     {
+        _towerBuff.Shield(true);
         CorruptionRate -= CorruptionRate * shieldRate;
     }
 
     public void RemoveShieldFromTower()
     {
+        _towerBuff.Shield(false);
         CorruptionRate = _defaultCorruptionRate;
     }
     
     public void AddAttackSpeed(float attackSpeedRate)
     {
+        _towerBuff.AttackSpeed(true);
         AttackSpeed += AttackSpeed * attackSpeedRate;
     }
 
     public void RemoveAttackSpeed()
     {
+        _towerBuff.AttackSpeed(false);
         AttackSpeed = _defaultAttackSpeed;
     }
 

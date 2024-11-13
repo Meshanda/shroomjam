@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -25,7 +26,7 @@ public class CleanPower : Power
         {
             _colliders = CheckOverlapCircle(_dataSo.Range);
             _corruptibles = GetGenericTypeList<Corruptible>();
-            
+            SetTowerHealBuff(true);
             _cleanRemainingDuration = _dataSo.Duration;
             _tick = 1f;
             StartCoroutine(CooldownCoroutine(_dataSo));
@@ -48,6 +49,23 @@ public class CleanPower : Power
 
             _tick += deltaTime;
             _cleanRemainingDuration -= deltaTime;
+
+            // Detect the moment the spell ends
+            if (_cleanRemainingDuration <= 0)
+            {
+                SetTowerHealBuff(false);
+            }
+        }
+    }
+
+    private void SetTowerHealBuff(bool value)
+    {
+        foreach (Corruptible corruptible in _corruptibles)
+        {
+            if (corruptible is Tower tower)
+            {
+                tower.SetHealStatusBuff(value);
+            }
         }
     }
 }
