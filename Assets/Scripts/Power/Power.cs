@@ -6,6 +6,8 @@ public abstract class Power : MonoBehaviour
 {
     [SerializeField] protected PowerDataSO _dataSo;
     protected List<Collider2D> _colliders;
+
+    protected PowerEffect _powerEffect;
     
     public abstract void UseAbility();
     
@@ -17,6 +19,11 @@ public abstract class Power : MonoBehaviour
     public float GetRange()
     {
         return _dataSo.Range;
+    }
+
+    public void SetPowerEffect(PowerEffect powerEffect)
+    {
+        _powerEffect = powerEffect;
     }
     
     protected List<Collider2D> CheckOverlapCircle(float range, string tag = null)

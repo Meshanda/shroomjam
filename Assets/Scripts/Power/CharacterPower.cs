@@ -10,8 +10,10 @@ public class CharacterPower : MonoBehaviour
     public static Action<bool, Enums.PowerType> OnPointerHoverSpellButton;
     public static Action<Enums.PowerType> OnClickSpellButton;
     
+    [SerializeField] protected PowerEffect _powerEffect;
+    
     [Header("Visual Feedback")]
-    [SerializeField] private GameObject _powerVisualizer;
+    [SerializeField] private GameObject _powerVisualizerHover;
     [SerializeField] private float _showDelay = .1f;
     [SerializeField] private float _fadeValue = .6f;
     [SerializeField] private float _fadeDelay = .1f;
@@ -39,8 +41,17 @@ public class CharacterPower : MonoBehaviour
 
     private void Awake()
     {
-        _visualizerSpriteRenderer = _powerVisualizer.GetComponent<SpriteRenderer>();
+        _visualizerSpriteRenderer = _powerVisualizerHover.GetComponent<SpriteRenderer>();
         DisplayAreaOfEffect(false);
+
+        InitPowers();
+    }
+
+    private void InitPowers()
+    {
+        _cleanPower.SetPowerEffect(_powerEffect);
+        _shieldPower.SetPowerEffect(_powerEffect);
+        _attackSpeedPower.SetPowerEffect(_powerEffect);
     }
 
     public void OnClean()
@@ -102,8 +113,8 @@ public class CharacterPower : MonoBehaviour
     {
         _coroutine = StartCoroutine(Utils.WaitRoutine(_showDelay, () =>
         {
-            _powerVisualizer.SetActive(true);
-            _powerVisualizer.transform.localScale = new Vector3(value, value, 1);
+            _powerVisualizerHover.SetActive(true);
+            _powerVisualizerHover.transform.localScale = new Vector3(value, value, 1);
             _tween = _visualizerSpriteRenderer.DOFade(_fadeValue, _fadeDelay);
         }));
     }
@@ -114,7 +125,7 @@ public class CharacterPower : MonoBehaviour
             StopCoroutine(_coroutine);
 
         _tween?.Kill();
-        _powerVisualizer.SetActive(false);
+        _powerVisualizerHover.SetActive(false);
         
         var color = _visualizerSpriteRenderer.color;
         color.a = 0;

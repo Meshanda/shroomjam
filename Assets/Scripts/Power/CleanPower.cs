@@ -27,6 +27,7 @@ public class CleanPower : Power
             _colliders = CheckOverlapCircle(_dataSo.Range);
             _corruptibles = GetGenericTypeList<Corruptible>();
             SetTowerHealBuff(true);
+            _powerEffect.HealAreaEffect(transform.position);
             _cleanRemainingDuration = _dataSo.Duration;
             _tick = 1f;
             StartCoroutine(CooldownCoroutine(_dataSo));
