@@ -1,23 +1,29 @@
 ﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.PlayerLoop;
 
-[RequireComponent(typeof(BoxCollider2D), typeof(Renderer))]
+[RequireComponent(typeof(Collider2D), typeof(SpriteRenderer))]
 public class BuildingMenuButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private Enums.TowerType _towerType;
+    [SerializeField] private TextMeshPro _costText;
     
-    public Color NormalColor = Color.white;
-    public Color HoverColor = Color.grey;
+    [SerializeField] private Sprite _normalSprite;
+    [SerializeField] private Sprite _hoverSprite;
 
-    private Renderer _renderer;
+    private SpriteRenderer _renderer;
     private BuildingMenu _buildingMenu;
 
     private void Awake()
     {
-        _renderer = GetComponent<Renderer>();
+        _renderer = GetComponent<SpriteRenderer>();
         _buildingMenu = GetComponentInParent<BuildingMenu>();
+    }
+
+    private void Start()
+    {
+        _costText.text = GameManager.Instance.GetTowerCost(_towerType).ToString();
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -27,11 +33,11 @@ public class BuildingMenuButton : MonoBehaviour, IPointerClickHandler, IPointerE
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        _renderer.material.color = HoverColor;
+        _renderer.sprite = _hoverSprite;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        _renderer.material.color = NormalColor;
+        _renderer.sprite = _normalSprite;
     }
 }
