@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 393f77c2ee6c4f3f910d95b30c96050d, type: 3}
   m_Name: BuildingSpotTile
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -6259951068939230890, guid: 7048446107582c44d9fba14e1f8446f0, type: 3}
+  m_Sprite: {fileID: 5035766315419644039, guid: 9bf986315f3652e4e807c2116953fe4b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
@@ -34,4 +34,3 @@ MonoBehaviour:
   m_InstancedGameObject: {fileID: 1845407332652422280, guid: 0eb82df330e243e4da257bef48add03d, type: 3}
   m_Flags: 1
   m_ColliderType: 1
-  _buildingMenuPfb: {fileID: 6207749296064699354, guid: edad1a35bcc299a4c9192e450ea9dbae, type: 3}
