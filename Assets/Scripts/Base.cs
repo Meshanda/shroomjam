@@ -59,7 +59,7 @@ public class Base : Corruptible
 
     public void RefreshSpecialTileMap()
     {
-        TileManager.Instance.SpecialTilemap.RefreshAllTiles();
+        TileManager.Instance.CorruptedTilemap.RefreshAllTiles();
     }
 
     private void PitchLoose(Enums.GameOverType gameOverType)

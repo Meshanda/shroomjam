@@ -6,6 +6,7 @@ using UnityEngine.Tilemaps;
 public class TileManager : Singleton<TileManager>
 {
     [SerializeField] private Tilemap _specialTilemap;
+    [SerializeField] private Tilemap _corruptedTilemap;
     
     [SerializeField] private BasicTowerTile _tourBasicTile;
     [SerializeField] private FastTowerTile _tourFastTile;
@@ -13,6 +14,7 @@ public class TileManager : Singleton<TileManager>
     [SerializeField] private SupportTowerTile _tourSupportTile;
     
     public Tilemap SpecialTilemap => _specialTilemap;
+    public Tilemap CorruptedTilemap => _corruptedTilemap;
     
     protected override void SingletonAwake()
     {
