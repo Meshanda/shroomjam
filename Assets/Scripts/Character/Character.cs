@@ -4,6 +4,9 @@ using UnityEngine;
 public class Character : Corruptible
 {
 
+    [SerializeField] private SpriteRenderer _corruptionEffect;
+    
+    [Header("Heal Effect")]
     [SerializeField] private GameObject _healEffect;
     
     private void OnEnable()
@@ -19,6 +22,11 @@ public class Character : Corruptible
         GameManager.OnGameOver -= OnGameOver;
     }
 
+    private void Start()
+    {
+        UpdateCorruptionFeedback(0);
+    }
+    
     public void ActivateHealEffect()
     {
         _healEffect.SetActive(true);
@@ -43,5 +51,12 @@ public class Character : Corruptible
     {
         DeCorrupt(float.MaxValue);
         CorruptionRate = 0;
+    }
+    
+    protected override void UpdateCorruptionFeedback(float corruptionPercentage)
+    {
+        var color = _corruptionEffect.color;
+        color.a = corruptionPercentage;
+        _corruptionEffect.color = color;
     }
 }

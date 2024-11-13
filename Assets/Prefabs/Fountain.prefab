@@ -117,8 +117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f61707a515bfa5143a006797c6446a05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _corruptionHealValue: 1
-  _corruptionHealSpeed: 1
+  _corruptionHealValue: 10
+  _corruptionHealSpeed: 0.5
 --- !u!212 &8039861744426856027
 SpriteRenderer:
   m_ObjectHideFlags: 0
