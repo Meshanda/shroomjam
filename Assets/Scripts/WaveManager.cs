@@ -86,7 +86,7 @@ public class WaveManager : MonoBehaviour
         if (_currentWave.WaveData)
             MoneyManager.AddMoney?.Invoke(_currentWave.WaveData.WaveReward);
         
-        if (_waves.Count <= 0)
+        if (_waves.Count <= 0 && _currentEnemies.Count == 0)
         {
             GameManager.OnGameWin?.Invoke();
             return;
