@@ -33,6 +33,8 @@ public class Enemy : Entity
     
     [SerializeField] private Animator _enemyAnimator;
     
+    [SerializeField] private GameObject _destroyDeathAnimPrefab;
+    
     private EnemyPathController _pathController;
     
 
@@ -91,6 +93,9 @@ public class Enemy : Entity
         TileManager.Instance.EnemyDead(transform.position, _corruptionRate);
 
         MoneyManager.AddMoney?.Invoke(_earnedPoints);
+        
+        Instantiate(_destroyDeathAnimPrefab, transform.position, Quaternion.identity);
+        
         DestroySelf();
         
     }
