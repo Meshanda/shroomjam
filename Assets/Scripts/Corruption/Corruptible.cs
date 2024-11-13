@@ -14,8 +14,9 @@ public abstract class Corruptible : MonoBehaviour
     private float _corruption = 0.0f;
     [Min(1f)]
     [SerializeField] private float _maxCorruption = 0.1f;
-    
-    public float CorruptionRate { get; protected set; } = 1f;
+
+    [SerializeField] private float _corruptionRate = 1f;
+    public float CorruptionRate { get => _corruptionRate; protected set => _corruptionRate = value; }
 
     public bool LastStateReached => _corruptionStateHandler.LastStateReached;
 
