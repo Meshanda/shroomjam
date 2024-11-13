@@ -153,7 +153,19 @@ MonoBehaviour:
   _corruptionStates:
   - OnCorruptionStateEnter:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 418380115565243420}
+          m_TargetAssemblyTypeName: Base, Assembly-CSharp
+          m_MethodName: ChangeMixerPitch
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     CorruptionPercentage: 0
   - OnCorruptionStateEnter:
       m_PersistentCalls:
@@ -179,6 +191,18 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 418380115565243420}
+          m_TargetAssemblyTypeName: Base, Assembly-CSharp
+          m_MethodName: ChangeMixerPitch
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.9
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
@@ -210,6 +234,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 418380115565243420}
+          m_TargetAssemblyTypeName: Base, Assembly-CSharp
+          m_MethodName: ChangeMixerPitch
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.8
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     CorruptionPercentage: 0.5
   - OnCorruptionStateEnter:
       m_PersistentCalls:
@@ -238,11 +274,24 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 418380115565243420}
+          m_TargetAssemblyTypeName: Base, Assembly-CSharp
+          m_MethodName: ChangeMixerPitch
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.7
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     CorruptionPercentage: 0.75
   _corruptionRate: 1
   _maxCorruption: 100
   _noiseDuration: 0.25
   _noiseEffect: {fileID: 527856853520889645}
+  _gameMixer: {fileID: 24100000, guid: 9f02a5e1562d942498375fb53f7183f1, type: 2}
 --- !u!212 &6106124669118709887
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -175,7 +175,7 @@ TextureImporter:
       name: Basic_Tower_2
       rect:
         serializedVersion: 2
-        x: 141
+        x: 142
         y: 0
         width: 68
         height: 97
@@ -197,7 +197,7 @@ TextureImporter:
       name: Basic_Tower_3
       rect:
         serializedVersion: 2
-        x: 211
+        x: 212
         y: 0
         width: 68
         height: 97

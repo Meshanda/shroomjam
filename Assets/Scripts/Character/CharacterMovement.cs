@@ -19,9 +19,9 @@ public class CharacterMovement : MonoBehaviour
     }
 
 
-    public void ReverseInput()
+    public void ReverseInput(bool reverse)
     {
-        _reversed *= -1;
+        _reversed = reverse? -1 : 1;
     }
     
 
