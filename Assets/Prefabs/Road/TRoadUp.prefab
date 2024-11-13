@@ -112,7 +112,8 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
     CorruptionPercentage: 0.8
-  _maxCorruption: 10
+  _corruptionRate: 1
+  _maxCorruption: 30
   _spriteRenderer: {fileID: 8039861744426856027}
 --- !u!212 &8039861744426856027
 SpriteRenderer:

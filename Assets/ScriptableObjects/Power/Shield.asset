@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Shield
   m_EditorClassIdentifier: 
   PowerType: 1
-  Range: 2
-  Value: 0.3
-  Duration: 5
   TimeTick: 1
-  Cooldown: 7
+  Duration: 3
+  Cooldown: 8
+  Range: 6
+  Value: 0.4
+  Cost: 20

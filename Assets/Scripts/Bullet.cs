@@ -15,6 +15,7 @@ public class Bullet : MonoBehaviour
     private GameObject _owner;
     
     private bool _corrupted = false;
+    private bool _hasCollided = false;
 
     private void Awake()
     {
@@ -55,6 +56,7 @@ public class Bullet : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (_hasCollided) return;
         if (other.CompareTag("Road"))
         {
             return;
@@ -62,12 +64,14 @@ public class Bullet : MonoBehaviour
         
         if (other.CompareTag("Enemy"))
         {
+            _hasCollided = true;
             other.GetComponentInParent<Enemy>().TakeDamage(_damage);
             Destroy(gameObject);
         }
         
         if (_corrupted && other.gameObject.layer.Equals(LayerMask.NameToLayer("Corruptible")) && other.gameObject != _owner)
         {
+            _hasCollided = true;
             var corruptibleCollided = other.GetComponentInParent<Corruptible>();
             if (corruptibleCollided.Corruption >= corruptibleCollided.MaxCorruption) return;
             

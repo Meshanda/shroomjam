@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Road : Corruptible
 {
+    [Header("Sprite")]
     [SerializeField] private SpriteRenderer _spriteRenderer;
 
     private void OnTriggerStay2D(Collider2D other)

@@ -4,8 +4,8 @@ using UnityEngine;
 public class Base : Corruptible
 {
 
+    [Header("Noise Effect")]
     [SerializeField] private float _noiseDuration;
-    
     [SerializeField] private GameObject _noiseEffect;
     
     private void OnTriggerEnter2D(Collider2D other)

@@ -4,20 +4,20 @@ using UnityEngine;
 
 public abstract class Tower : Corruptible
 {
-    [SerializeField] protected GameObject _bulletPfb;
-    
-    [SerializeField] protected GameObject _core;
-    
     public Enums.TowerType Type { get; protected set; }
     
-    [SerializeField] private TowerBuff _towerBuff;
 
     [Header("Tower Stats")]
     [SerializeField] private float _damage;
     [SerializeField] private float _corruptionDamage;
-    [SerializeField] private float _range;
     [SerializeField] private float _attackSpeed;
+    [SerializeField] private float _range;
     [SerializeField] private int _cost;
+    
+    [Header("References")]
+    [SerializeField] private TowerBuff _towerBuff;
+    [SerializeField] protected GameObject _bulletPfb;
+    [SerializeField] protected GameObject _core;
     
     protected bool _isCorrupted;
 

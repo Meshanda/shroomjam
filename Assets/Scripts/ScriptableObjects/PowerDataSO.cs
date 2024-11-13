@@ -4,13 +4,13 @@ using UnityEngine;
 public class PowerDataSO : ScriptableObject
 {
     public Enums.PowerType PowerType;
-    public float Range;
+    public float TimeTick = 1f;
     
-    public float Value;
+    [Header("Stats")]
     public float Duration;
-    public float TimeTick;
-    
     public float Cooldown;
+    public float Range;
+    public float Value;
     public int Cost;
 
     private float _remainingTimeCooldown;

@@ -9073,11 +9073,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5593127787774645742, guid: faacdefe04b0c6b4e8a49aa9f59da7ba, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5593127787774645742, guid: faacdefe04b0c6b4e8a49aa9f59da7ba, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5593127787774645742, guid: faacdefe04b0c6b4e8a49aa9f59da7ba, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9085,23 +9085,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5593127787774645742, guid: faacdefe04b0c6b4e8a49aa9f59da7ba, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 5593127787774645742, guid: faacdefe04b0c6b4e8a49aa9f59da7ba, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -55
       objectReference: {fileID: 0}
     - target: {fileID: 5796305049059402857, guid: faacdefe04b0c6b4e8a49aa9f59da7ba, type: 3}
       propertyPath: m_Name
       value: EndScreenCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 5863199294019262187, guid: faacdefe04b0c6b4e8a49aa9f59da7ba, type: 3}
-      propertyPath: m_AnchorMax.y
+    - target: {fileID: 5796305049059402857, guid: faacdefe04b0c6b4e8a49aa9f59da7ba, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5863199294019262187, guid: faacdefe04b0c6b4e8a49aa9f59da7ba, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5863199294019262187, guid: faacdefe04b0c6b4e8a49aa9f59da7ba, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5863199294019262187, guid: faacdefe04b0c6b4e8a49aa9f59da7ba, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9109,11 +9113,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5863199294019262187, guid: faacdefe04b0c6b4e8a49aa9f59da7ba, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 5863199294019262187, guid: faacdefe04b0c6b4e8a49aa9f59da7ba, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -165
       objectReference: {fileID: 0}
     - target: {fileID: 8580808874544011608, guid: faacdefe04b0c6b4e8a49aa9f59da7ba, type: 3}
       propertyPath: m_Pivot.x

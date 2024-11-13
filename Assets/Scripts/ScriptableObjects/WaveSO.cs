@@ -9,6 +9,7 @@ public class WaveSO : ScriptableObject
     public struct WaveElement
     {
         [Tooltip("String reference of the enemy to spawn")] public StringVariableSO EnemyReference;
+        [Tooltip("Number of enemy to spawn at once")] public int EnemyNumber;
         [Tooltip("Index of the spawner to use")] public int SpawnerIndex;
         [Tooltip("Delay in milliseconds with the previous spawn")] public float Delay;
     }
@@ -24,6 +25,10 @@ public class WaveSO : ScriptableObject
             if(e.EnemyReference is null)
             {
                 throw new ArgumentNullException("Wave " + name + " has an element with a null enemy reference");
+            }
+            if(e.EnemyNumber <= 0)
+            {
+                throw new ArgumentNullException("Wave " + name + " has an element with a number of enemy lower or equal to 0");
             }
             if (e.SpawnerIndex >= IntendedSpawnerNumber)
             {

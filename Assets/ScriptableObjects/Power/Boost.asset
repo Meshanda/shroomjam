@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Boost
   m_EditorClassIdentifier: 
   PowerType: 2
-  Range: 1
-  Value: 0.3
-  Duration: 3
   TimeTick: 1
-  Cooldown: 10
+  Duration: 3
+  Cooldown: 9
+  Range: 5
+  Value: 0.6
+  Cost: 30

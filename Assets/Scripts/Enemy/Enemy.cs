@@ -12,6 +12,7 @@ public class Enemy : Entity
     private static readonly int XDir = Animator.StringToHash("xDir");
     private static readonly int YDir = Animator.StringToHash("yDir");
 
+    [Header("Enemy Stats")]
     [Tooltip("Enemy walk speed")]
     [SerializeField] private float _speed;
     [Tooltip("Enemy health point")]
@@ -31,6 +32,7 @@ public class Enemy : Entity
     [Range(1.0f, 20f)]
     [SerializeField] private float _boostPower = 1.2f;
     
+    [Header("Animations")]
     [SerializeField] private Animator _enemyAnimator;
     
     [SerializeField] private GameObject _destroyDeathAnimPrefab;

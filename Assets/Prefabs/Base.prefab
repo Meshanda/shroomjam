@@ -239,7 +239,8 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
     CorruptionPercentage: 0.75
-  _maxCorruption: 10
+  _corruptionRate: 1
+  _maxCorruption: 100
   _noiseDuration: 0.25
   _noiseEffect: {fileID: 527856853520889645}
 --- !u!212 &6106124669118709887
@@ -335,7 +336,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 4, y: 4}
     newSize: {x: 0.89, y: 0.91}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -381,7 +382,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 4, y: 4}
     newSize: {x: 0.89, y: 0.91}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

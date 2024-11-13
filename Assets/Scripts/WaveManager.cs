@@ -125,11 +125,15 @@ public class WaveManager : MonoBehaviour
     {
         var enemyData = GameManager.Instance.EnemyDatabase.GetEnemyData(element.EnemyReference);
         var spawner = _spawners[element.SpawnerIndex];
-        var enemySpawned = spawner.Spawn(enemyData.prefab.gameObject, TileManager.Instance.SpecialTilemap);
+        
+        for (int i = 0; i < element.EnemyNumber; i++)
+        {
+            var enemySpawned = spawner.Spawn(enemyData.prefab.gameObject, TileManager.Instance.SpecialTilemap);
 
-        _currentEnemies.Add(enemySpawned);
+            _currentEnemies.Add(enemySpawned);
 
-        enemySpawned.OnDeath += EnemyDied;
+            enemySpawned.OnDeath += EnemyDied;
+        }
     }
 
     private void EnemyDied(Enemy deadEnemy)

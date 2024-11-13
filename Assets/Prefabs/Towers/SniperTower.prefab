@@ -161,15 +161,16 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
     CorruptionPercentage: 1
-  _maxCorruption: 10
+  _corruptionRate: 1.2
+  _maxCorruption: 100
+  _damage: 15
+  _corruptionDamage: 15
+  _attackSpeed: 0.5
+  _range: 5
+  _cost: 90
+  _towerBuff: {fileID: 4888365090564644020}
   _bulletPfb: {fileID: 6698104316039897986, guid: 95b6b5ab87f2d3543a8b6dedf663b9c9, type: 3}
   _core: {fileID: 3942145831224426896}
-  _towerBuff: {fileID: 4888365090564644020}
-  _damage: 3
-  _corruptionDamage: 0
-  _range: 5
-  _attackSpeed: 1
-  _cost: 0
   _weaponTransform: {fileID: 0}
   _weaponAnimator: {fileID: 0}
   _bulletPosition: {fileID: 9001117374936439674}
