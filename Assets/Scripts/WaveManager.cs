@@ -83,12 +83,15 @@ public class WaveManager : MonoBehaviour
     
     private void SpawnNextWave()
     {
+        if (_currentWave.WaveData)
+            MoneyManager.AddMoney?.Invoke(_currentWave.WaveData.WaveReward);
+        
         if (_waves.Count <= 0)
         {
             GameManager.OnGameWin?.Invoke();
             return;
         }
-
+        
         _currentWave = _waves[0];
         _waves.Remove(_currentWave);
         
@@ -128,11 +131,13 @@ public class WaveManager : MonoBehaviour
         
         for (int i = 0; i < element.EnemyNumber; i++)
         {
-            var enemySpawned = spawner.Spawn(enemyData.prefab.gameObject, TileManager.Instance.SpecialTilemap);
+            StartCoroutine(Utils.WaitRoutine(0.1f, () =>
+            {
+                var enemySpawned = spawner.Spawn(enemyData.prefab.gameObject, TileManager.Instance.SpecialTilemap);
+                _currentEnemies.Add(enemySpawned);
 
-            _currentEnemies.Add(enemySpawned);
-
-            enemySpawned.OnDeath += EnemyDied;
+                enemySpawned.OnDeath += EnemyDied;
+            }));
         }
     }
 
