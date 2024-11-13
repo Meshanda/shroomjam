@@ -115,7 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tilemap: {fileID: 0}
   _speed: 2.5
-  _health: 10
+  _health: 5
   _corruptionRate: 2
   _corruptionSpeed: 1
   _earnedPoints: 10

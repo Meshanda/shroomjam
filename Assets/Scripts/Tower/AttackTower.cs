@@ -131,5 +131,6 @@ public class AttackTower : Tower
     public void OnDecorrupted()
     {
         _isCorrupted = false;
+        ResetAggro();
     }
 }

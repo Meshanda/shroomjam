@@ -15,7 +15,7 @@ MonoBehaviour:
   PowerType: 0
   TimeTick: 1
   Duration: 3
-  Cooldown: 10
+  Cooldown: 9
   Range: 4
   Value: 25
   Cost: 40

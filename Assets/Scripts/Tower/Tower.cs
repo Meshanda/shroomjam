@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public abstract class Tower : Corruptible
 {
     public Enums.TowerType Type { get; protected set; }
 
-    [Header("Corruption Feedback")]
+    [Header("Feedback")]
     [SerializeField] private SpriteRenderer _corruptionRenderer;
+    
 
     [Header("Tower Stats")]
     [SerializeField] private float _damage;
@@ -83,5 +85,4 @@ public abstract class Tower : Corruptible
         color.a = a;
         _corruptionRenderer.color = color;
     }
-
 }
