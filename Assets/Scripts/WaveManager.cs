@@ -104,14 +104,20 @@ public class WaveManager : MonoBehaviour
     {
         if(!_manuallySpawnWaves)
             yield return new WaitForSeconds(currentWave.WaveDelay);
+
+        float lastEnemySpawn = 0.0f;
         
         foreach (var element in currentWave.WaveData.Elements)
         {
             yield return new WaitForSeconds(element.Delay);
             
             SpawnEnemy(element);
+            lastEnemySpawn = (element.EnemyNumber * 0.1f) + 0.1f;
         }
 
+        
+        yield return new WaitForSeconds(lastEnemySpawn);
+        
         _currentWaveFinishedSpawning = true;
         callback?.Invoke();
     }
