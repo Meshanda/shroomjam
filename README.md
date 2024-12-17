@@ -6,6 +6,9 @@ Chaotic Tower Defense
  
 ## Context
 This game has been made for the Shroomjam 2024.
+The theme of this jam was "Corruption". 
+We had the idea of making a tower defense where the main ressource is sanity.
+We ended up with a super fun game yet super short, we might expand this concept later.
 
 #### Objective
 We had no other purpose than to have fun and challenge ourselves.
